@@ -1,0 +1,70 @@
+﻿<!--
+
+    Este archivo contiene lo que se carga en todos los demás
+    Los "fragments" de los archivos
+
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC002.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+</head>
+<body>
+    <main role="main" class="pb-3">
+        <div class="gradient">
+            <!-- Navbar -->
+
+            <div class="container p-4">
+                <div class="row">
+
+                    <div class="col-sm-5 col-md-4 col-lg-2">
+                        <!-- Logo -->
+                        <h1 class="text-white">¡Aca va el logo!</h1>
+                    </div>
+
+                    <div class="col-sm-1 col-md-4 col-lg-6"></div> <!-- Espacio en blanco del navbar-->
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <ul class="d-flex justify-content-between navb-list">
+                            <li> <a href="#">Inicio</a> </li>
+                            <li> <a href="#">Productos</a> </li>
+                            <li> <a href="#">Q&A</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Navbar -->
+            <!-- Hero / Image centered -->
+            <div class="container-fluid">
+                <div class="row image-centered m-0">
+                </div>
+            </div>
+        </div>
+        <!-- Hero / Image centered -->
+        <div class="gradient2">
+            @RenderBody()
+            <!-- Footer -->
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+            <div class="container mt-5 footer-container">
+                
+            </div>
+            <!-- Footer -->
+        </div>
+    </main>
+     
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
