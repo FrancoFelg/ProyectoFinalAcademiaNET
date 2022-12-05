@@ -1,103 +1,46 @@
-﻿@{
+﻿@model List<Producto>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-
 <div class="">
-
-    <!-- Catalogo -->
-
     <div class="container-fluid album">
 
         <div class="row">
-            <!-- Card individual -->
-            <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
+            @foreach (var item in Model)
+            {
+                <!-- Card individual -->
+                <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
 
-                <!-- Fondo gris -->
-                <div class="singlecard-img">
-                    <div><!-- Imagen card --></div>
                     <!-- Fondo gris -->
+                    <div class="singlecard-img">
+                        <div><!-- Imagen card --></div>
+                        <!-- Fondo gris -->
+                    </div>
+                    <!-- Texto card -->
+                    <div class="singlecard-text">
+                        <p>@item.nombre</p>
+                        <p>$Precio</p>
+                    </div>
+                    <!-- Texto card -->
                 </div>
-                <!-- Texto card -->
-                <div class="singlecard-text">
-                    <p>Producto</p>
-                    <p>$Precio</p>
-                </div>
-                <!-- Texto card -->
-            </div>
 
-            <!-- Card individual -->
-            <!-- Card individual -->
-            <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
-
-                <!-- Fondo gris -->
-                <div class="singlecard-img">
-                    <div><!-- Imagen card --></div>
-                    <!-- Fondo gris -->
-                </div>
-                <!-- Texto card -->
-                <div class="singlecard-text">
-                    <p>Producto</p>
-                    <p>$Precio</p>
-                </div>
-                <!-- Texto card -->
-            </div>
-
-            <!-- Card individual -->
-            <!-- Card individual -->
-            <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
-
-                <!-- Fondo gris -->
-                <div class="singlecard-img">
-                    <div><!-- Imagen card --></div>
-                    <!-- Fondo gris -->
-                </div>
-                <!-- Texto card -->
-                <div class="singlecard-text">
-                    <p>Producto</p>
-                    <p>$Precio</p>
-                </div>
-                <!-- Texto card -->
-            </div>
-
-            <!-- Card individual -->
-            <!-- Card individual -->
-            <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
-
-                <!-- Fondo gris -->
-                <div class="singlecard-img">
-                    <div><!-- Imagen card --></div>
-                    <!-- Fondo gris -->
-                </div>
-                <!-- Texto card -->
-                <div class="singlecard-text">
-                    <p>Producto</p>
-                    <p>$Precio</p>
-                </div>
-                <!-- Texto card -->
-            </div>
-
-            <!-- Card individual -->
-            <!-- Card individual -->
-            <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
-
-                <!-- Fondo gris -->
-                <div class="singlecard-img">
-                    <div><!-- Imagen card --></div>
-                    <!-- Fondo gris -->
-                </div>
-                <!-- Texto card -->
-                <div class="singlecard-text">
-                    <p>Producto</p>
-                    <p>$Precio</p>
-                </div>
-                <!-- Texto card -->
-            </div>
-
-            <!-- Card individual -->
+                <!-- Card individual -->
+            }
+            
+            
         </div>
     </div>
     <!-- Catalogo -->
+
+    
+    <!-- Linea diagonal -->
     <div class="album-end"></div>
+    <!-- Linea diagonal -->
+
+    <!-- Sobre Nosotros -->
+
+    <!-- Sobre Nosotros -->
 
 </div>

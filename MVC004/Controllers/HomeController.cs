@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC004.Datos;
 using MVC004.Models;
 using System.Diagnostics;
 
@@ -6,6 +7,8 @@ namespace MVC004.Controllers
 {
     public class HomeController : Controller
     {
+        ProductoDatos productoDatos = new ProductoDatos();
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -15,7 +18,8 @@ namespace MVC004.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var objLista = productoDatos.getAllProducts();
+            return View(objLista);
         }
 
         public IActionResult Privacy()
