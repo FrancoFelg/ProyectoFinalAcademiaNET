@@ -29,3 +29,10 @@ C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\obj
 C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\obj\Debug\net6.0\MVC004.pdb
 C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\obj\Debug\net6.0\MVC004.genruntimeconfig.cache
 C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\obj\Debug\net6.0\ref\MVC004.dll
+C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\obj\Debug\net6.0\MVC004.csproj.CopyComplete
