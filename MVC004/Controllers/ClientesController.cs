@@ -11,5 +11,10 @@ namespace MVC004.Controllers
             var listaCliente = clientedato.ListaCliente();
             return View(listaCliente);
         }
+
+
+
     }
+
+    
 }

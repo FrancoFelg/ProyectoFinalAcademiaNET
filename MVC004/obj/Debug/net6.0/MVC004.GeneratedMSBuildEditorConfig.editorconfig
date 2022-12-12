@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Websites/ProyectoFinalAcademiaNET/MVC004/Views/Empleados/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Websites/ProyectoFinalAcademiaNET/MVC004/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -33,6 +37,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Websites/ProyectoFinalAcademiaNET/MVC004/Views/Proveedores/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Websites/ProyectoFinalAcademiaNET/MVC004/Views/Proveedores/ModificarProv.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcTW9kaWZpY2FyUHJvdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Websites/ProyectoFinalAcademiaNET/MVC004/Views/Proveedores/RegistroProv.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcUmVnaXN0cm9Qcm92LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Websites/ProyectoFinalAcademiaNET/MVC004/Views/Shared/Error.cshtml]
