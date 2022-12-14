@@ -44,7 +44,7 @@ namespace MVC004.Controllers
             System.Diagnostics.Debug.WriteLine("UPD_" + respuesta);
             if (respuesta)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Tabla");
             }
             else
             {
@@ -63,7 +63,7 @@ namespace MVC004.Controllers
             var respuesta = productoDatos.deleteById(id);
             if (respuesta)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Tabla");
             }
             else
             {

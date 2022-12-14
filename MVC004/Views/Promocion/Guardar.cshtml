@@ -1,0 +1,23 @@
+﻿@model Promocion
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <form asp-controller="Promocion" asp-action="Guardar" method="post">
+        <div class="container">
+            <div class="row">
+
+                <label for="vendedor">Nro de Vendedor</label>
+                <input  asp-for="producto" type="number" class="form-control" id="vendedor" placeholder="Ingrese el Nro del vendedor">
+
+                <label for="cliente">Nro de Vendedor</label>
+                <input  asp-for="descuento" type="number" class="form-control" id="cliente" placeholder="Ingrese su Nro de cliente">
+
+                <div class="d-flex justify-content-between">
+                    <button asp-controller="Promocion" asp-action="Guardar" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+}

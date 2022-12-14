@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace MVC004.Datos {
    
     public class ProductoDatos
+
     {
         public List<Producto> getAllProducts()
         {
@@ -44,7 +45,7 @@ namespace MVC004.Datos {
             using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
             {
                 conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("getProductById", conexionTemp);
+                SqlCommand cmd = new SqlCommand("GET_ProductById", conexionTemp);
 
                 cmd.Parameters.AddWithValue( "id", id );
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -55,8 +56,7 @@ namespace MVC004.Datos {
                     {
 
                         objProducto.id = Convert.ToInt32(lector["id"]);
-                        objProducto.nombre = Convert.ToString(lector["nombre"]);
-                        
+                        objProducto.nombre = Convert.ToString(lector["nombre"]);                        
                         
                     }
                 }
