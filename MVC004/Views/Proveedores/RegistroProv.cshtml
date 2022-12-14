@@ -1,57 +1,37 @@
-﻿@*
+﻿@model Proveedores
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
+<div class="container justify-items-center">
+    <h2>Registro de Proveedores</h2>
+<form class="row g-3 needs-validation"  asp-action="RegistroProv" asp-controller="Proveedores" method="Post" >
 
-<h1>Registro de Proveedores</h1>
-<form class="row g-3 needs-validation" novalidate>
-  <div class="col-md-4 position-relative">
-    <label for="validationTooltip01" class="form-label">Nombre del Proveedor</label>
-    <input type="text" class="form-control" id="validationTooltip01" value="Escribe aqui" required>
-    <div class="valid-tooltip">
-      Perfecto
-    </div>
-  </div>
-  <div class="col-md-4 position-relative">
-    <label for="validationTooltip02" class="form-label">Ubicacion </label>
-    <input type="text" class="form-control" id="validationTooltip02" value="Escribe aqui" required>
-    <div class="valid-tooltip">
-      Perfecto
-    </div>
-  </div>
-  <div class="col-md-4 position-relative">
-      <label for="validationTooltip02" class="form-label">Localidad </label>
-    <input type="text" class="form-control" id="validationTooltip02" value="Escribe aqui" required>
-    <div class="valid-tooltip">
-      Perfecto
-    </div>
+ <div class="mb-3">
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" asp-for="nombre">
 
   </div>
+  <div class="mb-3">
+    <label  class="form-label">Ubicacion</label>
+    <input type="text" class="form-control"asp-for="ubicacion" >
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Direccion</label>
+    <input type="text" class="form-control"asp-for="direccion" >
 
-  <div class="col-md-3 position-relative">
-    <label for="validationTooltip04" class="form-label">Tipo de documento</label>
-    <select class="form-select" id="validationTooltip04" required>
-      <option selected disabled value="">Elegir Opciones</option>
-          <option>Libreta Civica</option>
-          <option>Libreta Enrolamiento</option>
-          <option>Dni</option>
-          <option>Dni extranjero</option>
-          <option>Cuil/Cuit</option>
-          <option>Cuil Extranjero</option>
-    </select>
-    <div class="invalid-tooltip">
-      Por favor elija una opcion de documento.
-    </div>
   </div>
-  <div class="col-md-3 position-relative">
-    <label for="validationTooltip05" class="form-label">Nro Documento</label>
-    <input type="text" class="form-control" id="validationTooltip05" required>
-    <div class="invalid-tooltip">
-      Por favor Escriba el numero de documento.
-    </div>
+    <div class="mb-3">
+    <label  class="form-label">Tipo de Documento</label>
+    <input type="number" class="form-control"asp-for="tipo_doc" >
+
   </div>
-  <div class="col-12">
-    <button class="btn btn-primary" type="submit">Guardar </button>
+      <div class="mb-3">
+    <label  class="form-label">Numero de Documento</label>
+    <input type="number" class="form-control"asp-for="nro_doc" >
+
   </div>
+  <button type="submit" class="btn btn-outline-primary ">Registrar</button>
 </form>
+</div>

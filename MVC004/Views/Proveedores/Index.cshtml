@@ -4,18 +4,41 @@
 *@
 @{
 }
+<body>
 
-<h2>lista de proveedores </h2>
-
-@foreach (var item in Model){
-       <p>@item.id</p>
-
+ 
     
-        <p>@item.nombre</p>
-            <p>@item.ubicacion</p>
-            <p>@item.direccion</p>
-            <p>@item.tipo_doc</p>
-            <p>@item.nro_doc</p>
+
    
-}
+<div class="container justify-items-center">
+    <h2>lista de proveedores </h2>
+    <div class="mb-2">
+        <a asp-action="RegistroProv" asp-controller="Proveedores" class="btn btn-outline-info">Registrar </a>
+    </div>
+
+    <div>
+ <table class="table table-dark table-striped-columns g-6">
+    @foreach (var item in Model)
+    {
+           
+
+           <tr>
+                <th>@item.id</th>
+                <th>@item.nombre</th>
+                <th>@item.ubicacion</th>
+                <th>@item.direccion</th>
+                <th>@item.tipo_doc</th>
+                <th>@item.nro_doc</th>
+                    <th>  <a asp-action="ModificarProv" asp-controller="Proveedores" class="btn btn-outline-primary" asp-route-id="@item.id">Modificar</a></th>
+                    <th>  <a asp-action="EliminarProv" asp-controller="Proveedores" class="btn btn-outline-danger" asp-route-id="@item.id">eliminar</a></th>
+           </tr>
+            
+
+
+    }
+ </table>
+ </div>
+ </div>
+</body> 
+
 <p></p>

@@ -53,7 +53,7 @@ namespace MVC004.Datos
             {
                 conexionTemp.Open();
                 SqlCommand cmd=new SqlCommand("ObtenerProvedor", conexionTemp);
-                cmd.Parameters.AddWithValue("id",id);
+                cmd.Parameters.AddWithValue("idProv",id);
                 cmd.CommandType= CommandType.StoredProcedure;   
 
                 using( var lector = cmd.ExecuteReader())
@@ -75,6 +75,8 @@ namespace MVC004.Datos
         
         public bool AgregarProv(Proveedores obProveedor)
         {
+            System.Diagnostics.Debug.WriteLine("resultado="+obProveedor.nombre+obProveedor.ubicacion+ obProveedor.direccion,obProveedor.tipo_doc,obProveedor.nro_doc);
+
             bool respuesta;
             try
             {
@@ -88,8 +90,8 @@ namespace MVC004.Datos
                     cmd.Parameters.AddWithValue("nombre", obProveedor.nombre);
                     cmd.Parameters.AddWithValue("ubicacion", obProveedor.ubicacion);
                     cmd.Parameters.AddWithValue("direccion", obProveedor.direccion);
-                    cmd.Parameters.AddWithValue("tipo_doc", obProveedor.tipo_doc);
-                    cmd.Parameters.AddWithValue("nro_doc", obProveedor.nro_doc);
+                    cmd.Parameters.AddWithValue("tipodoc", obProveedor.tipo_doc);
+                    cmd.Parameters.AddWithValue("ndoc", obProveedor.nro_doc);
                     cmd.CommandType = CommandType.StoredProcedure;
                     //ejecucion del sp
                     cmd.ExecuteNonQuery();
@@ -100,7 +102,9 @@ namespace MVC004.Datos
             {
                 string error = e.Message;
                 respuesta = false;
-            
+                System.Diagnostics.Debug.WriteLine(e);
+
+
             }
             return respuesta;
 
@@ -122,8 +126,8 @@ namespace MVC004.Datos
                     cmd.Parameters.AddWithValue("nombre", obProveedor.nombre);
                     cmd.Parameters.AddWithValue("ubicacion", obProveedor.ubicacion);
                     cmd.Parameters.AddWithValue("direccion", obProveedor.direccion);
-                    cmd.Parameters.AddWithValue("tipo_doc", obProveedor.tipo_doc);
-                    cmd.Parameters.AddWithValue("nro_doc", obProveedor.nro_doc);
+                    cmd.Parameters.AddWithValue("tipodoc", obProveedor.tipo_doc);
+                    cmd.Parameters.AddWithValue("ndoc", obProveedor.nro_doc);
 
                     cmd.CommandType=CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
@@ -135,6 +139,7 @@ namespace MVC004.Datos
             catch (Exception e)
             {
                 string error = e.Message;
+                System.Diagnostics.Debug.WriteLine(e);
                 respuesta = false;
             }
             return respuesta;

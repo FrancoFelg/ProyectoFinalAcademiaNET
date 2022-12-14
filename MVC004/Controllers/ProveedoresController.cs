@@ -36,7 +36,7 @@ namespace MVC004.Controllers
         public IActionResult ModificarProv(int id)
         {
             var obProveedores=proveedorDatos.ObtenerProv(id);   
-            return View();
+            return View(obProveedores);
         }
 
         [HttpPost]
@@ -51,6 +51,27 @@ namespace MVC004.Controllers
             {
                 return View();
 
+            }
+            
+        }
+
+        public IActionResult EliminarProv(int id)
+        {
+            var obProveedores = proveedorDatos.ObtenerProv(id);
+            return View(obProveedores);
+        }
+
+        [HttpPost]
+        public IActionResult EliminarProv(Proveedores obProveedores)
+        {
+            var respuesta = proveedorDatos.EliminarProv(obProveedores.id);
+            if (respuesta)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+               return View();
             }
             
         }

@@ -1,6 +1,42 @@
-﻿@*
+﻿@model Proveedores
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
-<h1>Pagina para modificar datos de proveedor</h1>
+<div>
+ <div class="container justify-items-center">
+    <h2>Modificacion de datos del Proveedor</h2>
+<form class="row g-3 needs-validation"  asp-action="ModificarProv" asp-controller="Proveedores" method="Post" >
+<input asp-for="id" type="hidden" class="form-control" />
+ <div class="mb-3">
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" asp-for="nombre">
+
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Ubicacion</label>
+    <input type="text" class="form-control"asp-for="ubicacion" >
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Direccion</label>
+    <input type="text" class="form-control"asp-for="direccion" >
+
+  </div>
+    <div class="mb-3">
+    <label  class="form-label">Tipo de Documento</label>
+    <input type="number" class="form-control"asp-for="tipo_doc" >
+
+  </div>
+      <div class="mb-3">
+    <label  class="form-label">Numero de Documento</label>
+    <input type="number" class="form-control"asp-for="nro_doc" >
+
+  </div>
+  <button type="submit" class="btn btn-outline-primary ">Modificar</button>
+</form>
+</div>
+
+</div>
+
+
