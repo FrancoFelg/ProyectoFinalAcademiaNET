@@ -28,6 +28,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Orden/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Orden/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Orden/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Product/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -46,6 +58,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Product/Tabla.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxUYWJsYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Promocion/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uXEd1YXJkYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Promocion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Shared/Error.cshtml]
