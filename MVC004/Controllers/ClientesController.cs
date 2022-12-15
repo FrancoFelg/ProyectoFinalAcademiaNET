@@ -35,6 +35,7 @@ namespace MVC004.Controllers
 
         public IActionResult ModCliente(int id)
         {
+            
             var obclientes = clienteDatos.ObtenerCli(id);
             return View(obclientes);
         }
@@ -54,16 +55,16 @@ namespace MVC004.Controllers
             }
         }
 
-        public IActionResult DelCliente(int id)
+        /*public IActionResult DelCliente(int id)
         {
             var obclientes = clienteDatos.ObtenerCli(id);
             return View(obclientes);  
 
-        }
-        [HttpPost]
-        public IActionResult DelCliente(Clientes obclientes)
+        }*/
+    
+        public IActionResult DelCliente(int id)
         {
-            var respuesta = clienteDatos.EliminarCli(obclientes.Id);
+            var respuesta = clienteDatos.EliminarCli(id);
             if (respuesta)
             {
                 return RedirectToAction("Index");

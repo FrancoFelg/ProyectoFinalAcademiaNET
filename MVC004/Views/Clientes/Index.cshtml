@@ -31,7 +31,8 @@
                     <th>@item.apellido_razsoc</th>
                     <th>@item.domicilio</th>
                     <th>@item.doc_nro</th>
-                        <th>  <a asp-action="ModCliente" asp-controller="Clientes" class="btn btn-outline-primary" asp-route-id="@item.Id">Modificar</a></th>
+                    <th>  <a asp-action="ModCliente" asp-controller="Clientes" class="btn btn-outline-primary" asp-route-id="@item.Id">Modificar</a></th>
+                    <th>  <a asp-action="DelCliente" asp-controller="Clientes" class="btn btn-outline-danger" asp-route-id="@item.Id">eliminar</a></th>
                     
                </tr>
 
