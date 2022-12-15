@@ -8,20 +8,20 @@ namespace MVC004.Datos
     {
         public List<Empleados> ListaEmpleados()
         {
-            var listaEmpleados = new List<Empleados>();
+            var lista = new List<Empleados>();  
+            var conexion=new Conexion();
 
-            var conexion = new Conexion();
-            using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+            using (var conexionTemp=new SqlConnection(conexion.getCadenaSQL()))
             {
                 conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("ListaEmpleados", conexionTemp);
+                SqlCommand cmd=new SqlCommand("ListaEmpleados",conexionTemp);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                using (var lector = cmd.ExecuteReader())
+                using (var lector =cmd.ExecuteReader())
                 {
                     while (lector.Read())
                     {
-                        listaEmpleados.Add(new Empleados()
+                        lista.Add(new Empleados()
                         {
                             Id = Convert.ToInt32(lector["id"]),
                             doc_tipo_id = Convert.ToInt32(lector["doc_tipo_id"]),
@@ -32,39 +32,21 @@ namespace MVC004.Datos
                             id_usuario = Convert.ToInt32(lector["id_usuario"]),
 
 
-                        });
-                    }
-                }
-            }
-            return listaEmpleados;
-        }
 
-        public Proveedores ObtenerEmpleados(int id)
-        {
-            var obEmpleados = new Proveedores();
 
-            var conexion = new Conexion();
-            using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
-            {
-                conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("ObtenerProvedor", conexionTemp);
-                cmd.Parameters.AddWithValue("id", id);
-                cmd.CommandType = CommandType.StoredProcedure;
 
-                using (var lector = cmd.ExecuteReader())
-                {
-                    while (lector.Read())
-                    {
-                        obEmpleados.id = Convert.ToInt32(lector["id"]);
-                        obEmpleados.nombre = Convert.ToString(lector["nombre"]);
-                        obEmpleados.tipo_doc = Convert.ToInt32(lector["tipo_doc"]);
-                        obEmpleados.nro_doc = (int)Convert.ToInt64(lector["nro_doc"]);
+
+                        }); ; 
 
                     }
+
                 }
+                return lista;
+
             }
-            return obEmpleados;
         }
+
+       
 
 
 

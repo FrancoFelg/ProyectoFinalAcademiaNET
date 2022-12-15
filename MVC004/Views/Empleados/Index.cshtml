@@ -1,14 +1,10 @@
 ﻿@model List<Empleados>
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+
 <body>
 <div class="container justify-items-center">
-    <h2>lista de Clientes </h2>
+    <h2>lista de Empleados </h2>
     <div class="mb-2">
-        <a asp-action="RegistroProv" asp-controller="Clientes" class="btn btn-outline-info">Registrar </a>
+
     </div>
 
     <div>
@@ -23,8 +19,7 @@
                     <th>@item.doc_tipo_id</th>
                     <th>@item.doc_nro</th>
 
-                        <th>  <a asp-action="ModificarProv" asp-controller="Clientes" class="btn btn-outline-primary" asp-route-id="@item.Id">Modificar</a></th>
-                        <th>  <a asp-action="EliminarProv" asp-controller="Clientes" class="btn btn-outline-danger" asp-route-id="@item.Id">eliminar</a></th>
+                        
                </tr>
 
 

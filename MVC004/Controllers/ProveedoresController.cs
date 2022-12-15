@@ -74,7 +74,7 @@ namespace MVC004.Controllers
             }
             else
             {
-               return View();
+               return View("Index");
             }
             
         }

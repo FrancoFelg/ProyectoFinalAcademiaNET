@@ -75,7 +75,7 @@ namespace MVC004.Datos
         
         public bool AgregarProv(Proveedores obProveedor)
         {
-            System.Diagnostics.Debug.WriteLine("resultado="+obProveedor.nombre+obProveedor.ubicacion+ obProveedor.direccion,obProveedor.tipo_doc,obProveedor.nro_doc);
+            
 
             bool respuesta;
             try
