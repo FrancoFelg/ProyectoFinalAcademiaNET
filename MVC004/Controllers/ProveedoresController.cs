@@ -7,12 +7,15 @@ namespace MVC004.Controllers
     public class ProveedoresController : Controller
     {
         ProveedorDatos proveedorDatos=new ProveedorDatos();
+
+        // este metodo es para la visualizacion de la lista de proveedores registrados
         public IActionResult Index()
         {
             var listaprove = proveedorDatos.ListaProv();
             return View(listaprove);
         }
 
+        // este metodo es para cargar un nuevo proveedor
         public IActionResult RegistroProv()
         {
             return View();

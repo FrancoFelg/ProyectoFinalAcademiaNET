@@ -41,7 +41,7 @@ namespace MVC004.Datos
             return listaClientes;   
         }
 
-        public Clientes ObtenerCliente(int id)
+        public Clientes ObtenerCli(int id)
         {
             var obCliente = new Clientes();
 
@@ -75,6 +75,113 @@ namespace MVC004.Datos
                 return obCliente;
             }
         }
+
+        public bool AgregarCli(Clientes obCliente)
+        {
+           
+            bool respuesta;
+            try
+            {
+                var conexion = new Conexion();
+                using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+                {
+                    conexionTemp.Open();
+                    // se busca el nombre del sp
+                    SqlCommand cmd = new SqlCommand("RegistroCliente", conexionTemp);
+                    // nombre,ubicacion,direccion,tipo_doc,nro_doc
+                    cmd.Parameters.AddWithValue("tipodoc", obCliente.doc_tipo_id);
+                    cmd.Parameters.AddWithValue("numdoc", obCliente.doc_nro);
+                    cmd.Parameters.AddWithValue("nombre", obCliente.nombre);
+                    cmd.Parameters.AddWithValue("apellido", obCliente.apellido_razsoc);
+                    cmd.Parameters.AddWithValue("domicilio", obCliente.domicilio);
+                    cmd.Parameters.AddWithValue("localidad", obCliente.localidad);
+                    cmd.Parameters.AddWithValue("idusuario", obCliente.id_usuario);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    //ejecucion del sp
+                    cmd.ExecuteNonQuery();
+                }
+                respuesta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                respuesta = false;
+                System.Diagnostics.Debug.WriteLine(e);
+
+
+            }
+            return respuesta;
+
+        }
+
+        public bool ModificarCli(Clientes obCliente)
+        {
+            bool respuesta;
+            try
+            {
+                var conexion = new Conexion();
+                using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+                {
+                    conexionTemp.Open();
+                    SqlCommand cmd = new SqlCommand("UPcliente", conexionTemp);
+                    // sirve para buscar el id a modificar
+                    cmd.Parameters.AddWithValue("id", obCliente);
+                    // los datos a modificar.
+                    cmd.Parameters.AddWithValue("tipodoc", obCliente.doc_tipo_id);
+                    cmd.Parameters.AddWithValue("numdoc", obCliente.doc_nro);
+                    cmd.Parameters.AddWithValue("nombre", obCliente.nombre);
+                    cmd.Parameters.AddWithValue("apellido", obCliente.apellido_razsoc);
+                    cmd.Parameters.AddWithValue("domicilio", obCliente.domicilio);
+                    cmd.Parameters.AddWithValue("localidad", obCliente.localidad);
+                    cmd.Parameters.AddWithValue("Usuario", obCliente.id_usuario);
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+
+                }
+                respuesta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                System.Diagnostics.Debug.WriteLine(e);
+                respuesta = false;
+            }
+            return respuesta;
+
+        }
+
+        public bool EliminarCli(int id)
+        {
+            bool respuesta;
+            try
+            {
+                var conexion = new Conexion();
+                using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+                {
+                    conexionTemp.Open();
+                    // busqueda del sp que queremos usar.
+                    SqlCommand cmd = new SqlCommand("EliminarCliente", conexionTemp);
+                    // busqueda del id del registro a eliminar
+                    cmd.Parameters.AddWithValue("id", id);
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                }
+                respuesta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                respuesta = false;
+            }
+            return respuesta;
+
+        }
+
 
 
 
