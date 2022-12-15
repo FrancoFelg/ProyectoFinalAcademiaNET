@@ -2,7 +2,7 @@
 
 
 <div class="container justify-items-center">
-    <h2>Registro de Proveedores</h2>
+    <h2>Registro de Empleados</h2>
 <form class="row g-3 needs-validation"  asp-action="RegEmpleados" asp-controller="Empleados" method="Post" >
 
  <div class="mb-3">
@@ -16,12 +16,17 @@
   </div>
   <div class="mb-3">
     <label  class="form-label">Tipo de documento</label>
-    <input type="text" class="form-control"asp-for="doc_tipo_id" >
+    <input type="number" class="form-control"asp-for="doc_tipo_id" >
 
   </div>
     <div class="mb-3">
     <label  class="form-label">Numero de Documento</label>
     <input type="number" class="form-control"asp-for="doc_nro" >
+
+  </div>
+      <div class="mb-3">
+    <label  class="form-label">Id Usuario Asignado</label>
+    <input type="number" class="form-control"asp-for="id_usuario" >
 
   </div>
 
