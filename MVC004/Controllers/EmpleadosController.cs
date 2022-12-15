@@ -30,5 +30,27 @@ namespace MVC004.Controllers
             else { return View(); }
 
         }
+
+        public IActionResult ModEmpleados(int id)
+        {
+            var obempleados = empleadoDatos.ObtenerEmp(id);
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult ModEmpleados(Empleados obempleados)
+        {
+            var respuesta = empleadoDatos.ModEmpleados(obempleados);
+            if (respuesta)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+
+            }
+        }
+
     }
 }

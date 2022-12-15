@@ -1,0 +1,30 @@
+﻿@model Empleados;
+
+<div class="container justify-items-center">
+    <h2>Modificacion de Datos del Empleado</h2>
+<form class="row g-3 needs-validation"  asp-action="ModEmpleados" asp-controller="Empleados" method="Post" >
+<input asp-for="Id" type="hidden" class="form-control" />
+
+ <div class="mb-3">
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" asp-for="nombre">
+
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Apellido</label>
+    <input type="text" class="form-control"asp-for="apellido_razsoc" >
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Tipo de documento</label>
+    <input type="number" class="form-control"asp-for="doc_tipo_id" >
+
+  </div>
+    <div class="mb-3">
+    <label  class="form-label">Numero de Documento</label>
+    <input type="number" class="form-control"asp-for="doc_nro" >
+
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary ">Modificar</button>
+</form>
+</div>

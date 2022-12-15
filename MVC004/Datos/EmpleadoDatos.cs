@@ -46,6 +46,36 @@ namespace MVC004.Datos
             }
         }
 
+        public Empleados ObtenerEmp(int id)
+        {
+            var obempleados = new Empleados();
+
+            var conexion = new Conexion();
+            using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+            {
+                conexionTemp.Open();
+                SqlCommand cmd = new SqlCommand("GET_Empleado", conexionTemp);
+                cmd.Parameters.AddWithValue("id", id);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var lector = cmd.ExecuteReader())
+                {
+                    while (lector.Read())
+                    {
+                        obempleados.Id = Convert.ToInt32(lector["id"]);
+                        obempleados.doc_tipo_id = Convert.ToInt32(lector["doc_tipo_id"]);
+                        obempleados.doc_nro = (int)Convert.ToInt64(lector["doc_nro"]);
+                        obempleados.nombre = Convert.ToString(lector["nombre"]);
+                        obempleados.apellido_razsoc = Convert.ToString(lector["apellido_razsoc"]);
+                        obempleados.id_usuario = Convert.ToInt32(lector["id_usuario"]);
+
+
+                    }
+                }
+            }
+            return obempleados;
+        }
+
         public bool RegEmpleados(Empleados obEmpleados)
         {
             bool respuesta;
@@ -79,7 +109,40 @@ namespace MVC004.Datos
             return respuesta;
         }
 
-       
+        public bool ModEmpleados(Empleados obEmpleados)
+        {
+            bool respuesta;
+
+            try
+            {
+                var conexion = new Conexion();
+                using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+                {
+                    conexionTemp.Open();
+
+                    SqlCommand cmd = new SqlCommand("UPD_Empleados", conexionTemp);
+                    cmd.Parameters.AddWithValue("tipodoc", obEmpleados.doc_tipo_id);
+                    cmd.Parameters.AddWithValue("numdoc", obEmpleados.doc_nro);
+                    cmd.Parameters.AddWithValue("nombre", obEmpleados.nombre);
+                    cmd.Parameters.AddWithValue("apellido", obEmpleados.apellido_razsoc);
+                    cmd.Parameters.AddWithValue("idusuario", obEmpleados.id_usuario);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                respuesta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                respuesta = false;
+
+            }
+            return respuesta;
+        }
+
+
 
 
 
