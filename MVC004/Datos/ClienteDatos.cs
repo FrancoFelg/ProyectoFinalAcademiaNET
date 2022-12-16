@@ -50,7 +50,7 @@ namespace MVC004.Datos
             using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
             {
                 conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("ObtenerCliente", conexionTemp);
+                SqlCommand cmd = new SqlCommand("GET_Cliente", conexionTemp);
                 cmd.Parameters.AddWithValue("id", id);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -87,7 +87,7 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();
                     // se busca el nombre del sp
-                    SqlCommand cmd = new SqlCommand("RegistroCliente", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("INS_Cliente", conexionTemp);
                     // nombre,ubicacion,direccion,tipo_doc,nro_doc
                     cmd.Parameters.AddWithValue("tipodoc", obCliente.doc_tipo_id);
                     cmd.Parameters.AddWithValue("numdoc", obCliente.doc_nro);
@@ -123,7 +123,7 @@ namespace MVC004.Datos
                 using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
                 {
                     conexionTemp.Open();
-                    SqlCommand cmd = new SqlCommand("UPcliente", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("UPD_cliente", conexionTemp);
                     // sirve para buscar el id a modificar
                     cmd.Parameters.AddWithValue("id", obCliente);
                     // los datos a modificar.
@@ -162,7 +162,7 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();
                     // busqueda del sp que queremos usar.
-                    SqlCommand cmd = new SqlCommand("EliminarCliente", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("DEL_Cliente", conexionTemp);
                     // busqueda del id del registro a eliminar
                     cmd.Parameters.AddWithValue("id", id);
 
