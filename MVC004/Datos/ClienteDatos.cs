@@ -133,7 +133,7 @@ namespace MVC004.Datos
                     cmd.Parameters.AddWithValue("apellido", obCliente.apellido_razsoc);
                     cmd.Parameters.AddWithValue("domicilio", obCliente.domicilio);
                     cmd.Parameters.AddWithValue("localidad", obCliente.localidad);
-                    cmd.Parameters.AddWithValue("Usuario", obCliente.id_usuario);
+                
 
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();

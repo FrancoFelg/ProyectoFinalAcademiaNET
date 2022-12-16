@@ -52,7 +52,7 @@ namespace MVC004.Datos
             using( var conexionTemp=new SqlConnection(conexion.getCadenaSQL()))
             {
                 conexionTemp.Open();
-                SqlCommand cmd=new SqlCommand("ObtenerProvedor", conexionTemp);
+                SqlCommand cmd=new SqlCommand("GET_Proveedor", conexionTemp);
                 cmd.Parameters.AddWithValue("idProv",id);
                 cmd.CommandType= CommandType.StoredProcedure;   
 
@@ -85,7 +85,7 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();
                     // se busca el nombre del sp
-                    SqlCommand cmd = new SqlCommand("AgregarProveedor", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("INS_Proveedor", conexionTemp);
                     // nombre,ubicacion,direccion,tipo_doc,nro_doc
                     cmd.Parameters.AddWithValue("nombre", obProveedor.nombre);
                     cmd.Parameters.AddWithValue("ubicacion", obProveedor.ubicacion);
@@ -119,7 +119,7 @@ namespace MVC004.Datos
                 using(var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
                 {
                     conexionTemp.Open();
-                    SqlCommand cmd = new SqlCommand("ModificarProveedor", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("UPD_Proveedor", conexionTemp);
                     // sirve para buscar el id a modificar
                     cmd.Parameters.AddWithValue("id", obProveedor.id);
                     // los datos a modificar.
@@ -156,7 +156,7 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();
                     // busqueda del sp que queremos usar.
-                    SqlCommand cmd = new SqlCommand("EliminarProveedor", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("DEL_Proveedor", conexionTemp);
                     // busqueda del id del registro a eliminar
                     cmd.Parameters.AddWithValue("id",id);
 
