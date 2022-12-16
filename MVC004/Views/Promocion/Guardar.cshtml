@@ -7,11 +7,15 @@
         <div class="container">
             <div class="row">
 
-                <label for="vendedor">Nro de Vendedor</label>
-                <input  asp-for="producto" type="number" class="form-control" id="vendedor" placeholder="Ingrese el Nro del vendedor">
+                <label for="producto">Ingresar Nro del Producto</label>
+                <input asp-for="productoId" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
 
-                <label for="cliente">Nro de Vendedor</label>
-                <input  asp-for="descuento" type="number" class="form-control" id="cliente" placeholder="Ingrese su Nro de cliente">
+                <label for="descuento">Porcentaje del descuento</label>
+                <input asp-for="descuento" type="number" class="form-control" id="descuento" placeholder="Ingrese el descuento">
+
+                <label for="descuento">Porcentaje del descuento</label>
+                <input asp-for="fechaHasta" type="date" class="form-control" id="descuento" placeholder="Ingrese el descuento">
+
 
                 <div class="d-flex justify-content-between">
                     <button asp-controller="Promocion" asp-action="Guardar" class="btn btn-primary">Guardar cambios</button>

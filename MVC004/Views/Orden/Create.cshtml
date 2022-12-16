@@ -8,10 +8,10 @@
             <div class="row">
                 
                 <label for="vendedor">Nro de Vendedor</label>
-                <input asp-for="vendedor" type="number" class="form-control" id="vendedor" placeholder="Ingrese el Nro del vendedor">
+                <input asp-for="vendedorId" type="number" class="form-control" id="vendedor" placeholder="Ingrese el Nro del vendedor">
 
                 <label for="cliente">Nro de Vendedor</label>
-                <input asp-for="cliente" type="number" class="form-control" id="cliente" placeholder="Ingrese su Nro de cliente">
+                <input asp-for="clienteId" type="number" class="form-control" id="cliente" placeholder="Ingrese su Nro de cliente">
 
                 <div class="d-flex justify-content-between">
                     <button asp-controller="Orden" asp-action="Create" class="btn btn-primary">Guardar cambios</button>

@@ -23,8 +23,6 @@ namespace MVC004.Controllers
         [HttpPost]
         public IActionResult Create(Orden orden)
         {
-            orden.fechaAlta = DateOnly.FromDateTime(DateTime.Now);
-            orden.fechaEntrega = DateOnly.FromDateTime(DateTime.Now);
             
             bool rta = ordenDatos.save(orden);
             if (rta)
@@ -55,6 +53,7 @@ namespace MVC004.Controllers
         public IActionResult Editar(int id)
         {
             var obj = ordenDatos.getById(id);
+            System.Diagnostics.Debug.WriteLine(""+ obj.fechaAlta + " " + obj.fechaEntrega);
             return View(obj);
         }
 
@@ -68,6 +67,7 @@ namespace MVC004.Controllers
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("Error al editar");
                 return View();
             }
         }

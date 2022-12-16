@@ -2,9 +2,13 @@
 using MVC004.Datos;
 using MVC004.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MVC004.Controllers
+
 {
+
+    [Authorize]
     public class HomeController : Controller
     {
         ProductoDatos productoDatos = new ProductoDatos();
@@ -33,6 +37,6 @@ namespace MVC004.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        
+
     }
 }

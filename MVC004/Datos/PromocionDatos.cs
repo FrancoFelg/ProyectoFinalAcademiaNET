@@ -19,7 +19,7 @@ namespace MVC004.Datos
             using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
             {
                 conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("GET_Promocion", conexionTemp);
+                SqlCommand cmd = new SqlCommand("GET_PromocionANDProducto", conexionTemp);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var lector = cmd.ExecuteReader())
@@ -29,8 +29,15 @@ namespace MVC004.Datos
                         list.Add(new Promocion()
                         {
                             id = Convert.ToInt32(lector["promocion_id"]),
-                            //producto = Convert.ToInt32(lector["producto"]),
-                            //descuento = float.Parse(Convert.ToString(lector["descuento"])),
+                            producto = new Producto()
+                            {
+                                id = Convert.ToInt32(lector["id_producto"]),
+                                nombre = Convert.ToString(lector["nombre"])
+                            },
+                            descuento = float.Parse(Convert.ToString(lector["descuento"])),
+                            fechaDesde = DateOnly.FromDateTime(Convert.ToDateTime(lector["fecha_desde"])),
+                            fechaHasta = DateOnly.FromDateTime(Convert.ToDateTime(lector["fecha_hasta"])),
+                            vigencia = Convert.ToBoolean(lector["vigencia"])
                         });
                     }
                 }
@@ -47,7 +54,7 @@ namespace MVC004.Datos
             using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
             {
                 conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("GET_PromocionById", conexionTemp);
+                SqlCommand cmd = new SqlCommand("GET_PromocionByIdTOUPD", conexionTemp);
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("id", id);
@@ -56,11 +63,11 @@ namespace MVC004.Datos
                 {
                     while (lector.Read())
                     {
-                        promocion.id = Convert.ToInt32(lector["id"]);
-                        promocion.producto = Convert.ToInt32(lector["producto"]);
-                        promocion.descuento = float.Parse(Convert.ToString(lector["descuento"]));
-                        promocion.fechaDesde = DateOnly.FromDateTime(Convert.ToDateTime(lector["fechaDesde"]));
-                        promocion.fechaHasta = DateOnly.FromDateTime(Convert.ToDateTime(lector["fechaHasta"]));
+                        promocion.id = Convert.ToInt32(lector["promocion_id"]);
+                        promocion.productoId = Convert.ToInt32(lector["producto_id"]);
+                        promocion.descuento = float.Parse(Convert.ToString(lector["descuento"]));                        
+                        promocion.fechaHasta = DateOnly.FromDateTime(Convert.ToDateTime(lector["fecha_hasta"]));
+                        promocion.vigencia = Convert.ToBoolean(lector["vigencia"]);
                     }
                 }
             }
@@ -72,13 +79,14 @@ namespace MVC004.Datos
             bool rta;
             var conexion = new Conexion();
 
+
             try
             {
                 using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
                 {
                     conexionTemp.Open();
                     SqlCommand cmd = new SqlCommand("INS_Promocion", conexionTemp);                    
-                    cmd.Parameters.AddWithValue("producto_id", promocion.producto);
+                    cmd.Parameters.AddWithValue("producto_id", promocion.productoId);
                     cmd.Parameters.AddWithValue("descuento", promocion.descuento);                    
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -101,6 +109,14 @@ namespace MVC004.Datos
             bool rta;
             var conexion = new Conexion();
 
+            System.Diagnostics.Debug.WriteLine("descuento = " + promocion.descuento);
+            System.Diagnostics.Debug.WriteLine("vigencia = " + promocion.vigencia);
+            System.Diagnostics.Debug.WriteLine("fecha_hasta = " + promocion.fechaHasta);
+            promocion.fechaHasta = DateOnly.FromDateTime(DateTime.Today);
+            DateTime fecha = new DateTime(2019,05,09,0,0,0,0); //DateTime.Parse(promocion.fechaHasta.ToString());
+            System.Diagnostics.Debug.WriteLine("fecha_hasta = " + promocion.fechaHasta);
+            System.Diagnostics.Debug.WriteLine("fecha = " + fecha);
+
             try
             {
                 
@@ -110,10 +126,10 @@ namespace MVC004.Datos
                     SqlCommand cmd = new SqlCommand("UPD_Promocion", conexionTemp);
 
                     cmd.Parameters.AddWithValue("id", promocion.id);
-                    cmd.Parameters.AddWithValue("producto_id", promocion.producto);
+                    cmd.Parameters.AddWithValue("id_producto", promocion.productoId);
                     cmd.Parameters.AddWithValue("descuento", promocion.descuento);
-                    cmd.Parameters.AddWithValue("fechaDesde", promocion.fechaDesde);
-                    cmd.Parameters.AddWithValue("fechaHasta", promocion.fechaHasta);
+                    cmd.Parameters.AddWithValue("fecha_hasta", fecha);
+                    cmd.Parameters.AddWithValue("vigencia", promocion.vigencia);
 
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
