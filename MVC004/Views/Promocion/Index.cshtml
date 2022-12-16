@@ -16,6 +16,7 @@
                             <th scope="col">ID</th>
                             <th scope="col">Producto</th>
                             <th scope="col">Promocion</th>
+                            <th scope="col">Vigencia</th>
                             <th scope="col">Válido desde</th>
                             <th scope="col">Válido hasta</th>
                             <th scope="col" colspan="2">Opciones</th>
@@ -26,10 +27,26 @@
                         {
                             <tr>
                                 <th scope="row">@item.id</th>
-                                <!-- <td>@item.producto</td> -->
-                                <td>@item.descuento</td>
-                                <td>@item.fechaHasta </td>
-                                <td>@item.fechaDesde</td>
+                                <td>  @item.producto.nombre (ID=@item.producto.id)</td>
+                                <td>
+                                    @if (@item.descuento == 0)
+                                    {
+                                        <p>Sin descuentos</p>
+                                    } else {
+                                        <p>@item.descuento</p>
+                                    }
+                                
+                                </td>
+                                         <td>
+                                    @if (item.vigencia)
+                                    {
+                                        <p>Activa</p>
+                                    } else {
+                                    <p>No activa</p>
+                                    }
+                                    </td>
+                                <td>@item.fechaDesde </td>
+                                <td>@item.fechaHasta</td>
                                 <td><a asp-controller="Promocion" asp-action="Editar" asp-route-id="@item.id" asp-id class="btn btn-info">Editar</a></td>
                                 <td><a asp-controller="Promocion" asp-action="Eliminar" asp-route-id="@item.id" class="btn btn-danger">Eliminar</a></td>
                             </tr>

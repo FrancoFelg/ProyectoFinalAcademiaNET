@@ -9,8 +9,7 @@
               <thead>
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Precio</th>
+                  <th scope="col">Nombre</th>                  
                   <th scope="col" colspan="2">Acciones</th>
                 </tr>
               </thead>
@@ -18,8 +17,8 @@
                     @foreach (var item in Model)
                     {
                       <tr>
+                          <th scope="row"> @item.id </th>
                           <th scope="row"> @item.nombre </th>
-                          <td>precio</td>
                             <td> <a asp-controller="Product" asp-action="Editar" asp-route-id="@item.id" class="btn btn-outline-info">Editar</a> </td>
                             <td><a asp-controller="Product" asp-action="Eliminar" asp-route-id="@item.id" class="btn btn-outline-danger">Delete</a></td>
                         </tr>  

@@ -17,7 +17,7 @@ namespace MVC004.Datos {
             using( var conexionTemp= new SqlConnection(conexion.getCadenaSQL() ) )
             {
                 conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("Product_GetAll", conexionTemp);
+                SqlCommand cmd = new SqlCommand("GET_Product", conexionTemp);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using(var lector = cmd.ExecuteReader())
