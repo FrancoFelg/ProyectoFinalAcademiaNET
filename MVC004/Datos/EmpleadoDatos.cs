@@ -142,6 +142,35 @@ namespace MVC004.Datos
             return respuesta;
         }
 
+        public bool DelEmpleado(int id)
+        {
+            bool respuesta;
+            try
+            {
+                var conexion = new Conexion();
+                using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+                {
+                    conexionTemp.Open();
+                    // busqueda del sp que queremos usar.
+                    SqlCommand cmd = new SqlCommand("DEL_Empleados", conexionTemp);
+                    // busqueda del id del registro a eliminar
+                    cmd.Parameters.AddWithValue("id", id);
+
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                }
+                respuesta = true;
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                respuesta = false;
+            }
+            return respuesta;
+
+        }
 
 
 

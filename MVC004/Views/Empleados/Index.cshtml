@@ -14,6 +14,7 @@
          <th>apellido</th>
          <th>tipo de documento</th>
          <th>numero de documento</th>
+         <th> Fecha de alta</th>
          <th>Opcion 1</th>
          <th>Opcion 2</th>
      </tr>
@@ -27,8 +28,9 @@
                     <th>@item.apellido_razsoc</th>
                     <th>@item.doc_tipo_id</th>
                     <th>@item.doc_nro</th>
+                    <th>@item.fecha_alta</th>
                     <th>  <a asp-action="ModEmpleados" asp-controller="Empleados" class="btn btn-outline-primary" asp-route-id="@item.Id">Modificar</a></th>
-                    <th> 
+                        <th> <a asp-action="DelEmpleados" asp-controller="Empleados" class="btn btn-outline-danger" asp-route-id="@item.Id">Eliminar</a></th>
                         
                </tr>
 

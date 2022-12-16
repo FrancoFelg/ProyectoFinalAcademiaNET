@@ -52,5 +52,19 @@ namespace MVC004.Controllers
             }
         }
 
+        public IActionResult DelEmpleados(int id)
+        {
+            var respuesta = empleadoDatos.DelEmpleado(id);
+            if (respuesta)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+
+        }
+
     }
 }
