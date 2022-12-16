@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\felamberti\\Desktop\\Proyectos\\Academia .NET\\Ejercicios\\MVC004\\MVC004\\MVC004.csproj": {}
+    "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\MVC004.csproj": {}
   },
   "projects": {
-    "C:\\Users\\felamberti\\Desktop\\Proyectos\\Academia .NET\\Ejercicios\\MVC004\\MVC004\\MVC004.csproj": {
+    "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\MVC004.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felamberti\\Desktop\\Proyectos\\Academia .NET\\Ejercicios\\MVC004\\MVC004\\MVC004.csproj",
+        "projectUniqueName": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\MVC004.csproj",
         "projectName": "MVC004",
-        "projectPath": "C:\\Users\\felamberti\\Desktop\\Proyectos\\Academia .NET\\Ejercicios\\MVC004\\MVC004\\MVC004.csproj",
+        "projectPath": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\MVC004.csproj",
         "packagesPath": "C:\\Users\\felamberti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felamberti\\Desktop\\Proyectos\\Academia .NET\\Ejercicios\\MVC004\\MVC004\\obj\\",
+        "outputPath": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
