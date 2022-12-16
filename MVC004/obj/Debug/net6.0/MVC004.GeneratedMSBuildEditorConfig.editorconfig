@@ -12,9 +12,13 @@ build_property.RootNamespace = MVC004
 build_property.ProjectDir = C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\felamberti\Desktop\Proyectos\Academia .NET\Ejercicios\MVC004\MVC004
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Auth/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Home/ErrorDeCargarProducto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvckRlQ2FyZ2FyUHJvZHVjdG8uY3NodG1s
@@ -58,6 +62,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Product/Tabla.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxUYWJsYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Promocion/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/felamberti/Desktop/Proyectos/Academia .NET/Ejercicios/MVC004/MVC004/Views/Promocion/Guardar.cshtml]

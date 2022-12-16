@@ -31,6 +31,12 @@ namespace MVC004.Controllers
         }
     }
 
+        
+    public IActionResult Editar(int id)
+        {            
+            return View(pd.getById(id));
+        }
+
     [HttpPost]
     public IActionResult Editar(Promocion promocion)
     {

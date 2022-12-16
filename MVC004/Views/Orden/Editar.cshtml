@@ -7,13 +7,25 @@
         <input asp-for="id" type="hidden">
             <div class="container">
                 <div class="row">
+
+                    
                     <label for="vendedor">Nro de Vendedor</label>
-                    <input asp-for="vendedor" type="number" class="form-control" id="vendedor" placeholder="Ingrese el Nro del vendedor">
+                    <input asp-for="vendedorId" type="number" class="form-control" id="vendedor" placeholder="Nro del vendedor">
 
-                    <label for="cliente">Nro de Vendedor</label>
-                    <input asp-for="cliente" type="number" class="form-control" id="cliente" placeholder="Ingrese su Nro de cliente">
+                    
+                    <label for="cliente">Nro de Cliente</label>
+                    <input asp-for="clienteId" type="number" class="form-control" id="cliente" placeholder="Nro de cliente">
+                    
+                    <label for="fechaAlta">Fecha de Alta (No modificable)</label>
+                    <input asp-for="@Model.fechaAlta" asp-format="{0:yyyy-MM-dd}" disabled type="datetime" class="form-control" id="fechaAlta" placeholder="Fecha de Alta">
 
-                    <div class="d-flex justify-content-between">
+                    <label for="fechaEntrega">Fecha de Entrega</label>
+                    <input asp-for="fechaEntrega" type="date" type="datetime" class="form-control" id="fechaEntrega" placeholder="Fecha de Entrega">
+
+
+
+
+                <div class="d-flex justify-content-between">
                         <button asp-controller="Orden" asp-action="Editar" class="btn btn-primary">Guardar cambios</button>
                     </div>
                 </div>
