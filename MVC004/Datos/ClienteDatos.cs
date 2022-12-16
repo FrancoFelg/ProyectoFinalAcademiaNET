@@ -125,7 +125,7 @@ namespace MVC004.Datos
                     conexionTemp.Open();
                     SqlCommand cmd = new SqlCommand("UPD_cliente", conexionTemp);
                     // sirve para buscar el id a modificar
-                    cmd.Parameters.AddWithValue("id", obCliente);
+                    cmd.Parameters.AddWithValue("id", obCliente.Id);
                     // los datos a modificar.
                     cmd.Parameters.AddWithValue("tipodoc", obCliente.doc_tipo_id);
                     cmd.Parameters.AddWithValue("numdoc", obCliente.doc_nro);

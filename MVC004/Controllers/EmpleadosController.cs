@@ -34,7 +34,7 @@ namespace MVC004.Controllers
         public IActionResult ModEmpleados(int id)
         {
             var obempleados = empleadoDatos.ObtenerEmp(id);
-            return View();
+            return View(obempleados);
         }
 
         [HttpPost]
