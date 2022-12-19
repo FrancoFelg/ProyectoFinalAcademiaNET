@@ -12,7 +12,10 @@
         public string? localidad { get; set; }  
         public int id_usuario { get; set; }
 
+        // prueba
+        public string? nickname { get; set; }
+        public string? password { get; set; }
 
-        
+
     }
 }
