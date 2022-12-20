@@ -1,0 +1,31 @@
+﻿@model ProductoRelProveedor
+@{
+    <form asp-controller="ProductoRelProveedores" asp-action="Create" method="post">
+                <div class="container">
+                    <div class="row">
+                    
+                        <label for="producto">ID del producto</label>
+                        <input asp-for="productoId" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+                        <p>¿No tienes productos? <a class="btn btn-primary">Crear producto</a></p>
+
+                        <label for="producto">ID del proveedor</label>
+                        <input asp-for="proveedorId" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+                        <p>¿No está tu proveedor? <a class="btn btn-primary">Crear proveedor</a></p>
+
+                        <label for="producto">Stock actual</label>
+                        <input asp-for="stock" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+
+                        <label for="producto">Precio de compra</label>
+                        <input asp-for="precioCompra" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+
+                        <label for="producto">Precio de venta</label>
+                        <input asp-for="precioVenta" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+
+                    <div class="d-flex justify-content-between">
+                    <button asp-controller="ProductoRelProveedores" asp-action="Create" class="btn btn-primary">Guardar cambios</button>
+                        </div>
+                    </div>
+                </div>
+
+    </form>
+}

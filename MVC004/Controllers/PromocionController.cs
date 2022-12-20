@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MVC004.Datos;
 using MVC004.Models;
 
 namespace MVC004.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PromocionController : Controller
     {
         PromocionDatos pd = new PromocionDatos();

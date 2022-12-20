@@ -64,6 +64,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/felamberti/Documents/GitHub/ProyectoFinalAcademiaNET/MVC004/Views/Orden/ViewCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZW5cVmlld0NsaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Documents/GitHub/ProyectoFinalAcademiaNET/MVC004/Views/ProductoRelOrdenes/CrearOrden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9SZWxPcmRlbmVzXENyZWFyT3JkZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Documents/GitHub/ProyectoFinalAcademiaNET/MVC004/Views/ProductoRelProveedores/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9SZWxQcm92ZWVkb3Jlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Documents/GitHub/ProyectoFinalAcademiaNET/MVC004/Views/ProductoRelProveedores/ViewCliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9SZWxQcm92ZWVkb3Jlc1xWaWV3Q2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/felamberti/Documents/GitHub/ProyectoFinalAcademiaNET/MVC004/Views/Product/ClienteView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDbGllbnRlVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/felamberti/Documents/GitHub/ProyectoFinalAcademiaNET/MVC004/Views/Product/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,29 @@
+﻿@model ProductoRelOrden
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{    
+    <h2>@Model.productoRelProveedor.producto.nombre</h2>
+    <h3>$ @Model.productoRelProveedor.precioVenta</h3>
+    <p>Proveedor: @Model.productoRelProveedor.proveedor.nombre (DNI = @Model.productoRelProveedor.proveedor.nro_doc), Ubicación: @Model.productoRelProveedor.proveedor.ubicacion @Model.productoRelProveedor.proveedor.direccion </p>
+    
+
+    <form asp-controller="ProductoRelOrdenes" asp-action="Create" method="post">
+        <div class="container">
+            <div class="row">
+                <input asp-for="productoRelProveedor.id" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+
+                <label for="producto">ID Orden</label>
+                <input asp-for="ordenId" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+
+                <label for="producto">Ingresar Cantidad</label>
+                <input asp-for="cantidad" type="number" class="form-control" id="producto" placeholder="Ingrese el Nro de Producto">
+                
+                <div class="d-flex justify-content-between">
+                    <button asp-controller="ProductoRelOrdenes" asp-action="Create" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+}
