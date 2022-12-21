@@ -12,11 +12,17 @@
         public string? localidad { get; set; }  
         public int id_usuario { get; set; }
 
+<<<<<<< HEAD
         // uso para creacion de login 
 
         public string? nickname { get; set; }
         public string? password { get; set; }
 
+=======
+        // utilizados para la creacion de cliente con usuario
+        public string? nickname { get; set; }
+        public string? password { get; set; }   
+>>>>>>> main
 
 
     }

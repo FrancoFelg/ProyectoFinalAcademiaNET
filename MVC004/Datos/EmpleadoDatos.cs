@@ -87,13 +87,20 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();    
 
+<<<<<<< HEAD
                     SqlCommand cmd= new SqlCommand("LoginEmpleados", conexionTemp);
+=======
+                    SqlCommand cmd= new SqlCommand("LoginEmpleados",conexionTemp);
+>>>>>>> main
                     cmd.Parameters.AddWithValue("usuario", obEmpleados.nickname);
                     cmd.Parameters.AddWithValue("pass", obEmpleados.password);
                     cmd.Parameters.AddWithValue("numdoc", obEmpleados.doc_nro);
                     cmd.Parameters.AddWithValue("nombre", obEmpleados.nombre);
                     cmd.Parameters.AddWithValue("apellido", obEmpleados.apellido_razsoc);
+<<<<<<< HEAD
                   
+=======
+>>>>>>> main
                     cmd.CommandType = CommandType.StoredProcedure;
                  
                     cmd.ExecuteNonQuery();

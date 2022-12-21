@@ -720,6 +720,21 @@ C:\Users\felamberti\Documents\GitHub\ProyectoFinalAcademiaNET\MVC004\obj\Debug\n
 C:\Users\felamberti\Documents\GitHub\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.csproj.CopyComplete
 C:\Users\felamberti\Documents\GitHub\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.genruntimeconfig.cache
 C:\Users\felamberti\Documents\GitHub\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\ref\MVC004.dll
+<<<<<<< HEAD
+=======
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.csproj.AssemblyReference.cache
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.GeneratedMSBuildEditorConfig.editorconfig
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.AssemblyInfoInputs.cache
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.AssemblyInfo.cs
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.csproj.CoreCompileInputs.cache
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.MvcApplicationPartsAssemblyInfo.cs
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.MvcApplicationPartsAssemblyInfo.cache
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.RazorAssemblyInfo.cache
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.RazorAssemblyInfo.cs
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.dll
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\refint\MVC004.dll
+C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.pdb
+>>>>>>> main
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\bin\Debug\net6.0\appsettings.Development.json
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\bin\Debug\net6.0\appsettings.json
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\bin\Debug\net6.0\MVC004.staticwebassets.runtime.json
@@ -1056,6 +1071,7 @@ C:\Websites\ProyectoFinalAcademiaNET\MVC004\bin\Debug\net6.0\runtimes\win-x64\na
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+<<<<<<< HEAD
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.csproj.AssemblyReference.cache
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.GeneratedMSBuildEditorConfig.editorconfig
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.AssemblyInfoInputs.cache
@@ -1065,14 +1081,19 @@ C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.MvcApplicati
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.MvcApplicationPartsAssemblyInfo.cache
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.RazorAssemblyInfo.cache
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.RazorAssemblyInfo.cs
+=======
+>>>>>>> main
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\staticwebassets.build.json
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\staticwebassets.development.json
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\scopedcss\bundle\MVC004.styles.css
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\scopedcss\projectbundle\MVC004.bundle.scp.css
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.dll
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\refint\MVC004.dll
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.pdb
+=======
+>>>>>>> main
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\MVC004.genruntimeconfig.cache
 C:\Websites\ProyectoFinalAcademiaNET\MVC004\obj\Debug\net6.0\ref\MVC004.dll

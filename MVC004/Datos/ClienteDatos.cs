@@ -90,12 +90,20 @@ namespace MVC004.Datos
                     SqlCommand cmd = new SqlCommand("LoginCliente", conexionTemp);
                     // nombre,ubicacion,direccion,tipo_doc,nro_doc
                     cmd.Parameters.AddWithValue("usuario", obCliente.nickname);
+<<<<<<< HEAD
                     cmd.Parameters.AddWithValue("pass", obCliente.password);
+=======
+                    cmd.Parameters.AddWithValue("pass",obCliente.password);
+>>>>>>> main
                     cmd.Parameters.AddWithValue("numdoc", obCliente.doc_nro);
                     cmd.Parameters.AddWithValue("nombre", obCliente.nombre);
                     cmd.Parameters.AddWithValue("apellido", obCliente.apellido_razsoc);
                     cmd.Parameters.AddWithValue("domicilio", obCliente.domicilio);
                     cmd.Parameters.AddWithValue("localidad", obCliente.localidad);
+<<<<<<< HEAD
+=======
+                    
+>>>>>>> main
                     cmd.CommandType = CommandType.StoredProcedure;
                     //ejecucion del sp
                     cmd.ExecuteNonQuery();

@@ -10,10 +10,17 @@
         public string? apellido_razsoc { get; set; }
         public int id_usuario { get; set; }
 
+<<<<<<< HEAD
         // utilizados unicamente para login
         public string? nickname { get; set; }
         public string? password { get; set; }
 
 
+=======
+        // utilizados para crear un empleados
+        public string? nickname { get; set; }
+        public string? password { get; set; }
+
+>>>>>>> main
     }
 }
