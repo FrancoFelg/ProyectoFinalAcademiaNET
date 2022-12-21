@@ -1,9 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
+using Microsoft.AspNetCore.Mvc;
 using MVC004.Datos;
 using MVC004.Models;
 
 namespace MVC004.Controllers
 {
+    [Authorize(Roles = "Vendedor,Admin")]
+
     public class ProveedoresController : Controller
     {
         ProveedorDatos proveedorDatos=new ProveedorDatos();
