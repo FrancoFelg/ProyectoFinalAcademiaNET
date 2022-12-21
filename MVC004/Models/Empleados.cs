@@ -10,5 +10,9 @@
         public string? apellido_razsoc { get; set; }
         public int id_usuario { get; set; }
 
+        // prueba de registros
+        public string? nickname { get; set; }
+        public string? password { get; set; }
+
     }
 }
