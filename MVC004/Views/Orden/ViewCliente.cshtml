@@ -1,0 +1,35 @@
+﻿@model ProductoRelOrden
+@{
+    <form asp-controller="Orden" asp-action="UpdateProductoRelOrden" method="post">
+
+        <input asp-for="@Model.productoRelProveedor.id" type="hidden">
+
+        <div class="container">
+        <div class="row">
+
+            <div class="col-7">
+                <!-- Image and data column -->
+                
+            </div>
+            <!-- Buttons and price column -->
+            <div class="col-5">
+                 
+                    <h2> @Model.productoRelProveedor.producto.nombre </h2>
+                    <h3> $@Model.productoRelProveedor.precioVenta </h3>
+                <p>Vendedor: @Model.orden.vendedor.nombre @Model.orden.vendedor.apellidoORazonSocial (DNI = @Model.orden.vendedor.docNro) </p>
+                    <p>Stock: @Model.productoRelProveedor.stock unidades </p>
+
+                    <input asp-for="@Model.productoRelProveedor.stock" value="0" type="number" placeholder="Insertar la cantidad a comprar">
+
+
+                    <div class="d-flex justify-content-between">
+                        <button asp-controller="Orden" asp-action="UpdateProductoRelOrden" class="btn btn-primary">Comprar</button>
+                    </div>
+                            
+            </div>
+
+        </div>
+    </div>
+    </form>        
+}
+
