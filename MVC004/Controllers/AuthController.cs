@@ -4,10 +4,15 @@ using MVC004.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
+using Microsoft.AspNetCore.Identity;
+
 namespace MVC004.Controllers
 {
     public class AuthController : Controller
     {
+
         public IActionResult Index()
         {
             return View();
@@ -33,8 +38,8 @@ namespace MVC004.Controllers
 
                 }
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
-                
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));               
+
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -50,5 +55,6 @@ namespace MVC004.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Auth");
         }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity;
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>@ViewData["Title"]</title>
@@ -15,8 +17,8 @@
         <main role="main" class="pb-3">
             <div class="gradient">
                 <!-- Navbar -->
-
-                <div class="container p-4">
+            
+            <div class="container p-4">
                     <div class="row">
 
                         <div class="col-sm-2 col-12">
@@ -27,16 +29,24 @@
                         <div class="col-sm-10 col-12">
                             <ul class="d-flex justify-content-between navb-list">
                                 <li> <a asp-controller="Home" asp-action="Index">Inicio</a> </li>
-                                
-                                    <li> <a asp-controller="Product" asp-action="Index">Productos</a> </li>
+                                <li> <a asp-controller="Product" asp-action="Index">Productos</a> </li>
+
+                                @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor") ) )  {
                                     <li> <a asp-controller="Orden" asp-action="Index">Ordenes</a> </li>
-                                    <li> <a asp-controller="Promocion" asp-action="Index">Promocion</a> </li>
+                                    <li> <a asp-controller="Proveedores" asp-action="Index">Proveedores</a> </li>
+                                
+                                }                                
+                                @if (User.IsInRole("Admin") )
+                                {
                                     <li> <a asp-controller="Clientes" asp-action="Index">Clientes</a> </li>
                                     <li> <a asp-controller="Empleados" asp-action="Index">Empleados</a> </li>
-                                    <li> <a asp-controller="Proveedores" asp-action="Index">Proveedores</a> </li>
-                                    
+                                    <li> <a asp-controller="Promocion" asp-action="Index">Promocion</a> </li>
+                                }
+                                
+                                
+                            <li> <a href="#">Q&A</a> </li>
                                 <li> <a asp-controller="Auth" asp-action="Salir">Cerrar sesion</a> </li>
-                                <li> <a href="#">Q&A</a> </li>
+                                
                             </ul>
                         </div>
                     </div>

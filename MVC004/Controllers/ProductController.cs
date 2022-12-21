@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MVC004.Models;
 using MVC004.Datos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MVC004.Controllers
 {
+    [Authorize(Roles = "Vendedor,Admin")]
     public class ProductController : Controller
     {
         ProductoDatos productoDatos = new ProductoDatos();
