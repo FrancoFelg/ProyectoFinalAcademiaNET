@@ -12,6 +12,7 @@ namespace MVC004.Controllers
 		public IActionResult Create()
 		{
 			var po = new ProductoRelProveedor();
+            ViewBag.nombre = "Nombrepor parametro";
 			return View(po);
 		}
 

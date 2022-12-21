@@ -29,9 +29,10 @@
                         <div class="col-sm-10 col-12">
                             <ul class="d-flex justify-content-between navb-list">
                                 <li> <a asp-controller="Home" asp-action="Index">Inicio</a> </li>
-                                <li> <a asp-controller="Product" asp-action="Index">Productos</a> </li>
+                                
 
                                 @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor") ) )  {
+                                <li> <a asp-controller="Product" asp-action="Index">Productos</a> </li>
                                     <li> <a asp-controller="Orden" asp-action="Index">Ordenes</a> </li>
                                     <li> <a asp-controller="Proveedores" asp-action="Index">Proveedores</a> </li>
                                 
