@@ -12,7 +12,12 @@
         public string? localidad { get; set; }  
         public int id_usuario { get; set; }
 
+        // uso para creacion de login 
 
-        
+        public string? nickname { get; set; }
+        public string? password { get; set; }
+
+
+
     }
 }
