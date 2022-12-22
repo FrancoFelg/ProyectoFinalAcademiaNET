@@ -4,31 +4,44 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    <div class="gradient-default">
+        <div class="container min-vh-100 ">
+            <div class="row">
+                <div class="col-12">
+                    <h2>¿Quieres vender en nuestra web?</h2>
+                    <p>Únete a nuestro retailer vendiendo tus productos en nuestra aplicación.</p>
+                    <p>Completa los datos del formulario debajo y podras poner a la venta tus productos.</p>
+                    <form asp-action="Guardar" asp-controller="Product" method="post">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <!-- Fondo gris -->
+                                    <div class="singlecard-img">
+                                        <div><!-- Imagen card --></div>                                        
+                                    </div>
+                                    <!-- Fondo gris -->
+                                </div>
+                                <div class="col-9">
+                                    <label for="productoName">Nombre del Producto</label>
+                                    <input asp-for="nombre" type="text" class="form-control" id="productoName" placeholder="Ingrese el nombre del producto">
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2>¿Quieres vender en nuestra web?</h2>
-                <p>Únete a nuestro retailer vendiendo tus productos en nuestra aplicación.</p>
-                <p>Completa los datos del formulario debajo y podras poner a la venta tus productos.</p>
-                <form asp-action="Guardar" asp-controller="Product" method="post">
-                    <div class="container">
-                        <div class="row">
-                            <label for="productoName">Nombre del Producto</label>
-                            <input asp-for="nombre" type="text" class="form-control" id="productoName" placeholder="Ingrese el nombre del producto">
-
+                                    <div class="d-flex justify-content-between mt-3">
+                                        <div>
+                                            <button asp-controller="Product" asp-action="Guardar" class="btn btn-primary mr-2">Publicar</button>
+                                            <button asp-controller="ProductoRelProveedores" asp-action="Create" class="btn btn-primary">Crear orden de venta</button>
+                                        </div>
+                                        <button asp-controller="Product" asp-action="Tabla" class="btn btn-outline-primary">Editar mis productos</button>
+                                            
+                                    </div>
+                                </div>                                
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <button asp-controller="Product" asp-action="Guardar" class="btn btn-primary">Publicar</button>
-                        <button asp-controller="ProductoRelProveedores" asp-action="Create" class="btn btn-primary">Crear orden de venta</button>
-                        <button asp-controller="Product" asp-action="Tabla" class="btn btn-outline-primary">Editar mis productos</button>
-                    </div>
-                </form>
+                        
+                    </form>
                 
                 
+                </div>
             </div>
         </div>
     </div>
-        
 }
