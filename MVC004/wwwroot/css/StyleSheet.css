@@ -14,16 +14,23 @@
     */
     overflow-x: hidden;
     font-family: 'Archivo', sans-serif;
+    z-index: 1;
 }
 
 body {
     color: var(--white);
 }
 
-a {
-    
+a, p {
+    color: var(--white);
     text-decoration: none;
 }
+
+singlecard :hover {
+    color: var(--white);
+    animation: link-block-resize;
+}
+    
 
 .navb-list > li > a {
     color: #E9E9E9;
@@ -40,14 +47,23 @@ main {
 }
 
 .gradient {
+    position: absolute;   
+    min-height: 100vh;
+    min-width: 100vw;
+    z-index: 0;
     background: rgb(0,29,52);
     background: linear-gradient(180deg, 
     var(--lightblue) 0%,
     var(--darkblue) 100%);
 }
 
+.gradient-default{
+    background-color: var(--darkblue);
+    z-index: -1;
+}
+
 .album {
-    background: rgb(0,29,52);    
+    /*background: rgb(0,29,52);    */
 }
 
 
@@ -88,7 +104,7 @@ h1 {
 
 .singlecard-img {
     background-color: var(--lightgray);
-    padding: 1.5em;
+    padding: 2.2em 3em;
     margin: 0 5px;
     max-width: 450px;
     text-align: center;
