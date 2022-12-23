@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XEDqogjIaxePt9TqDRagQ4LQra73Vs+jsrEtM/bacZg=",
+  "Hash": "MqxNu1DALPRm4TR+r/ayG4MORRFv5tRlVsqh0xZ2U90=",
   "Source": "MVC004",
   "BasePath": "_content/MVC004",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\CocaCola.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\wwwroot\\img\\fire.png",
+      "SourceId": "MVC004",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\wwwroot\\",
+      "BasePath": "_content/MVC004",
+      "RelativePath": "img/fire.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\fire.png"
     },
     {
       "Identity": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\wwwroot\\img\\Lenovo.png",

@@ -6,16 +6,19 @@
 @{
     <div class="container min-vh-100"> 
         <div class="row">
+            <div class="col-12 text-center d-flex flex-column justify-content-center align-content-center">
+                <h2 class="text-bold mt-5">Ingresa a la <span class="cartmander-text">mejor tienda</span>!</h2>
+            </div>
             <div class="col-12">
                 <form class="my-5" method="post" asp-controller="Auth" asp-action="Index">
-                    
-                    <div class="form-group">
+
+                    <div class="form-group mt-1">
                         <label for="email">Ingrese su Email</label>
                         <input type="email" asp-for="emailUser" class="form-control" id="email" placeholder="elmejorusuario@gmail.com">
             
                     
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <label for="contrasenia">Ingrese su contraseña</label>
                         <input type="password" asp-for="contraseniaUser" class="form-control" id="contrasenia" placeholder="Ingrese su contraseña">
                     </div>

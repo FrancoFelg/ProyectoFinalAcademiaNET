@@ -6,6 +6,7 @@
     --white: #ffffff;
     --lightgray: #E9E9E9;
     --fluorgreen: #DAED26;
+    --cartmander: #FF7000;
 }
 
 * {
@@ -24,6 +25,10 @@ body {
 a, p {
     color: var(--white);
     text-decoration: none;
+}
+
+.text-bold{
+    font-weight: 800;
 }
 
 singlecard :hover {
@@ -80,6 +85,28 @@ main {
 
 h1 {
     font-size: 14px
+}
+
+.cartmander-text {
+    color: var(--cartmander);
+}
+
+.cartmander-title {
+    color: var(--white);
+    border-bottom: var(--cartmander) 5px solid;
+}
+
+.cartmander-logo{
+    height: 1.5em;
+}
+
+.min-vh-80{
+    min-height: 80vh;
+}
+
+
+.subtitle {
+    font-size: 4em;
 }
 
 .image-centered {

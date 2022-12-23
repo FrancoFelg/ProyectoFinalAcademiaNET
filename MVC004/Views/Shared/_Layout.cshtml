@@ -21,16 +21,17 @@
             
             <div class="container p-4">
                     <div class="row">
-
-                        <div class="col-sm-2 col-12">
+                        <div class="col-sm-2 col-12  d-flex justify-content-center align-items-center">
                             <!-- Logo -->
-                            <h1 class="text-white">¡Aca va el logo!</h1>
+                            <h1 class="p-2"><span class="cartmander-title">Cartmander</span></h1>
+                            <img class="cartmander-logo" src="/img/fire.png"/>
                         </div>
 
-                        <div class="col-sm-10 col-12">
+                <div class="col-sm-10 col-12 p-2">
                             <ul class="d-flex justify-content-between navb-list">
                                 <li> <a asp-controller="Home" asp-action="Index">Inicio</a> </li>
                                 
+
 
                                 @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor") ) )  {
                                 <li> <a asp-controller="Product" asp-action="Index">Productos</a> </li>
