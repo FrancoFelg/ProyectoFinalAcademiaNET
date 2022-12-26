@@ -12,29 +12,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
-
-        <main role="main" class="pb-3">
-            <div class="gradient">
+<body>    
+        <main role="main">        
+            <div class="gradient min-vh-100">
+            
+            </div>
                 <!-- Navbar -->
             
             <div class="container p-4">
                     <div class="row">
-
-                        <div class="col-sm-2 col-12">
+                        <div class="col-sm-2 col-12  d-flex justify-content-center align-items-center">
                             <!-- Logo -->
-                            <h1 class="text-white">¡Aca va el logo!</h1>
+                            <h1 class="p-2"><span class="cartmander-title">Cartmander</span></h1>
+                            <img class="cartmander-logo" src="/img/fire.png"/>
                         </div>
 
-                        <div class="col-sm-10 col-12">
+                <div class="col-sm-10 col-12 p-2">
                             <ul class="d-flex justify-content-between navb-list">
                                 <li> <a asp-controller="Home" asp-action="Index">Inicio</a> </li>
-                                <li> <a asp-controller="Product" asp-action="Index">Productos</a> </li>
+                                
+
 
                                 @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor") ) )  {
+                                <li> <a asp-controller="Product" asp-action="Index">Productos</a> </li>
                                     <li> <a asp-controller="Orden" asp-action="Index">Ordenes</a> </li>
-                                    <li> <a asp-controller="Proveedores" asp-action="Index">Proveedores</a> </li>
-                                
+                                    <li> <a asp-controller="Proveedores" asp-action="Index">Proveedores</a> </li>                                
                                 }                                
                                 @if (User.IsInRole("Admin") )
                                 {
@@ -52,26 +54,36 @@
                     </div>
                 </div>
                 <!-- Navbar -->
-                <!-- Hero / Image centered -->
-                <div class="container-fluid">
-                    <div class="row image-centered m-0">
-                    </div>
-                </div>
-            </div>
-                <!-- Hero / Image centered -->
-            <div class="gradient2">
+                
+            
+                
+                <div class="gradient-default">
                 @RenderBody()
-                <!-- Footer -->
-                <div class="container">
-                    <div class="row">
-                    </div>
-                </div>
-                <div class="container mt-5 footer-container">
                 </div>
                 <!-- Footer -->
-            </div>
-        </main>
+                <div class="min-vw-100 gradient-default">
+                    <div class="container mt-5">
+                        <div class="row text-center">
+                            <div class="col-3">
+                                <p>¡Tu logo va aca!</p>
+                                <p>Texto decorativo</p>
+                            </div>
+                            <div class="col-3">
+                                <p>Columna del footer</p>
+                            </div>
+                            <div class="col-3">
+                                <p>Columna del footer</p>
+                            </div>
+                            <div class="col-3">
+                                <p>Columna del footer</p>
+                            </div>
 
+                       </div>
+                </div>
+            </div>
+                <!-- Footer -->
+            
+        </main>    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
