@@ -13,21 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>    
-        <main role="main">        
-            <div class="gradient min-vh-100">
+        <main role="main" class="gradient-default">        
+@*            <div class="gradient min-vh-100">
             
-            </div>
+            </div>*@
                 <!-- Navbar -->
-            
-            <div class="container p-4">
-                    <div class="row">
+
+                <div class="container-fluid p-4 gradient-default">
+                   <div class="row">
                         <div class="col-sm-2 col-12  d-flex justify-content-center align-items-center">
                             <!-- Logo -->
                             <h1 class="p-2"><span class="cartmander-title">Cartmander</span></h1>
                             <img class="cartmander-logo" src="/img/fire.png"/>
                         </div>
 
-                <div class="col-sm-10 col-12 p-2">
+                        <div class="col-sm-10 col-12 p-2">
                             <ul class="d-flex justify-content-between navb-list">
                                 <li> <a asp-controller="Home" asp-action="Index">Inicio</a> </li>
                                 
@@ -52,16 +52,18 @@
                             </ul>
                         </div>
                     </div>
+                     <div class="">
+                     @RenderBody()
+                    </div>
+
                 </div>
                 <!-- Navbar -->
                 
             
                 
-                <div class="gradient-default">
-                @RenderBody()
-                </div>
+
                 <!-- Footer -->
-                <div class="min-vw-100 gradient-default">
+                <div class="">
                     <div class="container mt-5">
                         <div class="row text-center">
                             <div class="col-3">

@@ -47,24 +47,24 @@ singlecard :hover {
 
 main {
     width: 100vw;
-    z-index: 1;
+    
     position: absolute;
 }
 
 .gradient {
-    position: absolute;   
-    min-height: 100vh;
-    min-width: 100vw;
-    z-index: 0;
+    /*position: absolute; */  
+/*    min-height: 100vh;
+    min-width: 100vw;*/
+    
     background: rgb(0,29,52);
     background: linear-gradient(180deg, 
     var(--lightblue) 0%,
     var(--darkblue) 100%);
 }
 
-.gradient-default{
-    background-color: var(--darkblue);
-    z-index: -1;
+.gradient-default {
+    background: rgb(28,25,68);
+    background: linear-gradient(0deg, rgba(28,25,68,1) 19%, rgba(5,5,130,1) 44%, rgba(0,212,255,1) 100%);
 }
 
 .album {
@@ -223,3 +223,4 @@ li {
     height:100vh;
 
 }
+
