@@ -87,15 +87,16 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();
                     // se busca el nombre del sp
-                    SqlCommand cmd = new SqlCommand("INS_Cliente", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("LoginCliente", conexionTemp);
                     // nombre,ubicacion,direccion,tipo_doc,nro_doc
-                    cmd.Parameters.AddWithValue("tipodoc", obCliente.doc_tipo_id);
+                    cmd.Parameters.AddWithValue("usuario", obCliente.nickname);
+                    cmd.Parameters.AddWithValue("pass",obCliente.password);
                     cmd.Parameters.AddWithValue("numdoc", obCliente.doc_nro);
                     cmd.Parameters.AddWithValue("nombre", obCliente.nombre);
                     cmd.Parameters.AddWithValue("apellido", obCliente.apellido_razsoc);
                     cmd.Parameters.AddWithValue("domicilio", obCliente.domicilio);
                     cmd.Parameters.AddWithValue("localidad", obCliente.localidad);
-                    cmd.Parameters.AddWithValue("idusuario", obCliente.id_usuario);
+                    
                     cmd.CommandType = CommandType.StoredProcedure;
                     //ejecucion del sp
                     cmd.ExecuteNonQuery();

@@ -7,13 +7,20 @@
 <body>
    
 <div class="container justify-items-center">
-    <h2>lista de proveedores </h2>
-    <div class="mb-2">
-        <a asp-action="RegistroProv" asp-controller="Proveedores" class="btn btn-outline-info">Registrar </a>
+
+
+        <div class="row">
+
+            <div class="col-12 py-3 px-2  d-flex align-items-center justify-content-between">
+                <h2>Lista de Proveedores</h2>
+                <a asp-action="RegistroProv" asp-controller="Proveedores" class="btn btn-primary">Registrar nuevo Proveedor</a>
+            </div>
+
+
     </div>
 
     <div>
- <table class="table table-dark table-striped-columns g-6">
+ <table class="table  table-striped-columns g-6">
           <tr>
          <th>Id</th>
          <th>Nombre</th>
@@ -37,8 +44,8 @@
                 <th>@item.direccion</th>
                 <th>@item.tipo_doc</th>
                 <th>@item.nro_doc</th>
-                <th>  <a asp-action="ModificarProv" asp-controller="Proveedores" class="btn btn-outline-primary" asp-route-id="@item.id">Modificar</a></th>
-                    <th>  <a asp-action="EliminarProv" asp-controller="Proveedores" class="btn btn-outline-danger" asp-route-id="@item.id">eliminar</a></th>
+                <th>  <a asp-action="ModificarProv" asp-controller="Proveedores" class="btn btn-opciones" asp-route-id="@item.id">Modificar</a></th>
+                    <th>  <a asp-action="EliminarProv" asp-controller="Proveedores" class="btn btn-eliminar" asp-route-id="@item.id">eliminar</a></th>
            </tr>
             
 
