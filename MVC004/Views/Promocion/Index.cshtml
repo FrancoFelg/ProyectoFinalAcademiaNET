@@ -3,7 +3,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    <div class="container">
+    <div class="container min-vh-80">
         <div class="row">
             <div class="col-12">
                 <div class="col-12 py-3 px-2  d-flex align-items-center justify-content-between">
@@ -47,8 +47,8 @@
                                     </td>
                                 <td>@item.fechaDesde </td>
                                 <td>@item.fechaHasta</td>
-                                <td><a asp-controller="Promocion" asp-action="Editar" asp-route-id="@item.id" asp-id class="btn btn-info">Editar</a></td>
-                                <td><a asp-controller="Promocion" asp-action="Eliminar" asp-route-id="@item.id" class="btn btn-danger">Eliminar</a></td>
+                                <td><a asp-controller="Promocion" asp-action="Editar" asp-route-id="@item.id" asp-id class="btn btn-opciones">Editar</a></td>
+                                <td><a asp-controller="Promocion" asp-action="Eliminar" asp-route-id="@item.id" class="btn btn-eliminar">Eliminar</a></td>
                             </tr>
                         }
                     </tbody>
