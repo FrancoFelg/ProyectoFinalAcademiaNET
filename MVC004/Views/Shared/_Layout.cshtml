@@ -13,13 +13,74 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>    
-        <main role="main" class="gradient-default">        
+        <main role="main" class="gradient-default">
+
+
+        <div class="gradiente container-fluid ">
+            <nav class="navbar navbar-expand-lg navbar-dark aling-content-center letranav">
+                <!--BRAND-->
+                <!-- Logo -->
+                <h1 class="p-2"><span class="cartmander-title">Cartmander</span></h1>
+                <img class="cartmander-logo" src="/img/fire.png" />
+
+                <!--BUTTON COLAPSE-->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#contenido-nav"
+                        aria-controls="contenido-nav"
+                        aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--NAVBAR CONTENIDO-->
+                <div class="collapse navbar-collapse active justify-content-center align-items-center" id="contenido-nav">
+
+                    <ul class="navbar-nav ">
+                        <!--Home-->
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index"><p>Inicio</p></a>
+                        </li>
+
+
+                        @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor")))
+                        {
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Product" asp-action="Index"><p>Productos</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Orden" asp-action="Index"><p>Ordenes</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Proveedores" asp-action="Index"><p>Proveedores</p></a> </li>
+                        }
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Clientes" asp-action="Index"><p>Clientes</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Empleados" asp-action="Index"><p>Empleados</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Promocion" asp-action="Index"><p>Promocion</p></a> </li>
+                        }
+
+                        <li class="nav-item"> <a href="#">Q&A</a> </li>
+                        <li class="nav-item"> <a class="nav-link" asp-controller="Auth" asp-action="Salir"><p>Cerrar sesion</p></a> </li>
+
+
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+            
+
+
+
+
+
+
+
 @*            <div class="gradient min-vh-100">
             
             </div>*@
                 <!-- Navbar -->
 
-                <div class="container-fluid p-4 gradient-default">
+
+@*                <div class="container-fluid p-4 gradient-default">
                    <div class="row">
                         <div class="col-sm-2 col-12  d-flex justify-content-center align-items-center">
                             <!-- Logo -->
@@ -51,7 +112,7 @@
                                 
                             </ul>
                         </div>
-                    </div>
+                    </div*@
                      <div class="">
                      @RenderBody()
                     </div>
