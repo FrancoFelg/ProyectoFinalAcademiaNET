@@ -31,7 +31,7 @@ namespace MVC004.Datos
                             id = Convert.ToInt32(lector["promocion_id"]),
                             producto = new Producto()
                             {
-                                id = Convert.ToInt32(lector["id_producto"]),
+                                id = Convert.ToInt32(lector["id"]),
                                 nombre = Convert.ToString(lector["nombre"])
                             },
                             descuento = float.Parse(Convert.ToString(lector["descuento"])),
