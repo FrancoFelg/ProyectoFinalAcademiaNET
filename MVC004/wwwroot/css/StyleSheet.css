@@ -27,6 +27,16 @@ a, p {
     text-decoration: none;
 }
 
+th {
+    color: var(--white);
+    text-decoration: none;
+}
+
+td {
+    color: var(--white);
+    text-decoration: none;
+}
+
 .text-bold{
     font-weight: 800;
 }
@@ -224,7 +234,14 @@ li {
 
 }
 
-letranav {
-    color: var(--white);
-    text-decoration: none;
+.btn-opciones {
+    color: #ffffff;
+   
+    border-color: #00E6FF;
 }
+
+.btn-eliminar {
+    color: #FFFFFF;
+   
+    border-color: #F01111;
+} 
