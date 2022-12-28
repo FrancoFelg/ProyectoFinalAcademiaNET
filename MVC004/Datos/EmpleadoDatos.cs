@@ -87,7 +87,7 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();    
 
-                    SqlCommand cmd= new SqlCommand("LoginEmpleados",conexionTemp);
+                    SqlCommand cmd= new SqlCommand("INS_Empleados",conexionTemp);
                     cmd.Parameters.AddWithValue("usuario", obEmpleados.nickname);
                     cmd.Parameters.AddWithValue("pass", obEmpleados.password);
                     cmd.Parameters.AddWithValue("numdoc", obEmpleados.doc_nro);

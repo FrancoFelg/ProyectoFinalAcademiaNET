@@ -87,7 +87,7 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();
                     // se busca el nombre del sp
-                    SqlCommand cmd = new SqlCommand("LoginCliente", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("INS_Cliente", conexionTemp);
                     // nombre,ubicacion,direccion,tipo_doc,nro_doc
                     cmd.Parameters.AddWithValue("usuario", obCliente.nickname);
                     cmd.Parameters.AddWithValue("pass",obCliente.password);
