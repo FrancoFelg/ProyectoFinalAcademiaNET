@@ -92,6 +92,7 @@ namespace MVC004.Datos
                     cmd.Parameters.AddWithValue("direccion", obProveedor.direccion);
                     cmd.Parameters.AddWithValue("tipodoc", obProveedor.tipo_doc);
                     cmd.Parameters.AddWithValue("ndoc", obProveedor.nro_doc);
+                    
                     cmd.CommandType = CommandType.StoredProcedure;
                     //ejecucion del sp
                     cmd.ExecuteNonQuery();

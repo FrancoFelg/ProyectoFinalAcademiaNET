@@ -41,12 +41,12 @@
                         <li class="nav-item active">
                             <a class="nav-link" asp-controller="Home" asp-action="Index"><p>Inicio</p></a>
                         </li>
-
+                        <li class="nav-item"> <a class="nav-link" asp-controller="Orden" asp-action="Index"><p>Ordenes</p></a> </li>
 
                         @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor")))
                         {
                             <li class="nav-item"> <a class="nav-link" asp-controller="Product" asp-action="Index"><p>Productos</p></a> </li>
-                            <li class="nav-item"> <a class="nav-link" asp-controller="Orden" asp-action="Index"><p>Ordenes</p></a> </li>
+                            
                             <li class="nav-item"> <a class="nav-link" asp-controller="Proveedores" asp-action="Index"><p>Proveedores</p></a> </li>
                         }
                         @if (User.IsInRole("Admin"))

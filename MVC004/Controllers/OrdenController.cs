@@ -13,15 +13,15 @@ namespace MVC004.Controllers
         OrdenDatos ordenDatos = new OrdenDatos();
         ProductoDatos productDatos = new ProductoDatos();
 
-        [Authorize(Roles = "Vendedor,Admin")]
+        [Authorize]
         public IActionResult Index()
         {
             return View(ordenDatos.getAllOrdenes());
         }
 
-        
 
-        [Authorize]
+
+        [Authorize(Roles = "Vendedor,Admin")]
         [HttpPost]        
         public IActionResult UpdateProductoRelOrden(ProductoRelOrden productoRelOrden)
         {
