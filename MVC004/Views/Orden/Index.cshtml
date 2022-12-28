@@ -3,14 +3,14 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    <div class="container">
+    <div class="container min-vh-100">
         <div class="row">
             <div class="col-12">
-                <div class="col-12 py-3 px-2 bg-dark d-flex align-items-center justify-content-between">
+                <div class="col-12 py-3 px-2  d-flex align-items-center justify-content-between">
                     <h2>Tabla de Ordenes de Compra</h2>
                     <a asp-controller="Orden" asp-action="Create" class="btn btn-primary">Crear orden de compra</a>
                 </div>
-                <table class="table table-dark">
+                <table class="table ">
                   <thead>
                     <tr>
                       <th scope="col">ID</th>
@@ -18,7 +18,8 @@
                       <th scope="col">Cliente</th>
                       <th scope="col">Fecha de Alta</th>
                       <th scope="col">Fecha de Entrega</th>
-                      <th scope="col" colspan="2">Opciones</th>
+                      <th scope="col">Opcion 1</th>
+                      <th scope="col">Opcion 2</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -30,8 +31,8 @@
                             <td>@item.cliente.nombre</td>
                             <td>@item.fechaAlta </td>
                             <td>@item.fechaEntrega</td>
-                                <td><a asp-controller="Orden" asp-action="Editar" asp-route-id="@item.id" asp-id class="btn btn-info">Editar</a></td>
-                                <td><a asp-controller="Orden" asp-action="Eliminar" asp-route-id="@item.id" class="btn btn-danger">Eliminar</a></td>            
+                                <td><a asp-controller="Orden" asp-action="Editar" asp-route-id="@item.id" asp-id class="btn btn-opciones">Editar</a></td>
+                                <td><a asp-controller="Orden" asp-action="Eliminar" asp-route-id="@item.id" class="btn btn-eliminar">Eliminar</a></td>            
                         </tr>
                     }
                   </tbody>

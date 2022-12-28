@@ -12,6 +12,10 @@ namespace MVC004.Controllers
     public class HomeController : Controller
     {
         ProductoDatos productoDatos = new ProductoDatos();
+        ProductoRelOrdenesDatos prodRelOrden = new ProductoRelOrdenesDatos();
+        
+        ProductoRelProveedoresDatos prodRelProv = new ProductoRelProveedoresDatos();
+        
 
         private readonly ILogger<HomeController> _logger;
 
@@ -22,7 +26,14 @@ namespace MVC004.Controllers
 
         public IActionResult Index()
         {
-            var objLista = productoDatos.getAllProducts();
+            var objLista = prodRelProv.getAllProducts();
+            
+            /*
+            List<object> list = new List<object>();
+            list.Add(currentUser);
+            var obj = new ObjView(objLista, list);
+            */
+
             return View(objLista);
         }
 

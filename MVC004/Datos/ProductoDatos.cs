@@ -3,6 +3,7 @@ using System.Data.SqlTypes;
 using System.Data.SqlClient;
 using System.Data;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography;
 
 namespace MVC004.Datos {
    
@@ -13,33 +14,42 @@ namespace MVC004.Datos {
         {
             var objLista = new List<Producto>();
 
-            var conexion = new Conexion();
-            using( var conexionTemp= new SqlConnection(conexion.getCadenaSQL() ) )
+            try
             {
-                conexionTemp.Open();
-                SqlCommand cmd = new SqlCommand("GET_Product", conexionTemp);
-                cmd.CommandType = CommandType.StoredProcedure;
 
-                using(var lector = cmd.ExecuteReader())
+                var conexion = new Conexion();
+                using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
                 {
-                    while(lector.Read())
+                    conexionTemp.Open();
+                    SqlCommand cmd = new SqlCommand("GET_Product", conexionTemp);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    using (var lector = cmd.ExecuteReader())
                     {
-                        objLista.Add(new Producto()
+                        while (lector.Read())
                         {
-                            id = Convert.ToInt32(lector["id"]),
-                            nombre = Convert.ToString(lector["nombre"]),
-                        });
-                    }
+
+                            objLista.Add(new Producto()
+                            {
+                                id = Convert.ToInt32(lector["id"]),
+                                nombre = Convert.ToString(lector["nombre"])
+                            });
+                        } 
+                    } 
                 }
 
+                
+            }catch(Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
             }
 
             return objLista;
         }
-        
+
         public Producto getById(int id)
         {
-            var objProducto = new Producto();
+            var obj = new Producto();
             var conexion = new Conexion();
 
             using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
@@ -47,23 +57,26 @@ namespace MVC004.Datos {
                 conexionTemp.Open();
                 SqlCommand cmd = new SqlCommand("GET_ProductById", conexionTemp);
 
-                cmd.Parameters.AddWithValue( "id", id );
+                cmd.Parameters.AddWithValue("id", id);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                using(var lector = cmd.ExecuteReader())
+                using (var lector = cmd.ExecuteReader())
                 {
-                    while(lector.Read())
+                    while (lector.Read())
                     {
+                        {
+                            obj.id = Convert.ToInt32(lector["id"]);
+                            obj.nombre = Convert.ToString(lector["nombre"]);
 
-                        objProducto.id = Convert.ToInt32(lector["id"]);
-                        objProducto.nombre = Convert.ToString(lector["nombre"]);                        
-                        
+                        };
                     }
                 }
             }
 
-            return objProducto;
+            return obj;
         }
+        
+        
 
         public bool save(Producto producto) {
             bool respuesta;
@@ -86,11 +99,42 @@ namespace MVC004.Datos {
 
                 }
                 respuesta = true;
+                System.Diagnostics.Debug.WriteLine("Producto Guardado" + producto.nombre);
             }
             catch (Exception e)
             {
                 string error = e.Message;
                 System.Diagnostics.Debug.WriteLine(e);
+                respuesta = false;
+            }
+            return respuesta;
+        }
+
+        public bool editProductoRelProveedor(ProductoRelProveedor prodRelProv)
+        {
+            bool respuesta;            
+
+            try
+            {
+                var conexion = new Conexion();
+                using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
+                {
+                    conexionTemp.Open();
+                    SqlCommand cmd = new SqlCommand("UPD_prodRelProveedores", conexionTemp);
+
+                    cmd.Parameters.AddWithValue("id", prodRelProv.id);
+                    cmd.Parameters.AddWithValue("stock", prodRelProv.stock);                    
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+
+                    respuesta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                string error = e.Message;
+                System.Diagnostics.Debug.WriteLine("UPD_Error:" + e);
                 respuesta = false;
             }
             return respuesta;

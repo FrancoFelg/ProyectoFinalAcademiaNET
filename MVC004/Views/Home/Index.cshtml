@@ -1,48 +1,53 @@
-﻿@model List<Producto>
+﻿@model List<ProductoRelProveedor>
 
 @{
     ViewData["Title"] = "Home Page";
 }
 
-
 <div class="">
-    <div class="container-fluid album">
-
+    <div class="container album">
+        <!-- Hero -->
+        <div class="row min-vh-80">
+            <div class="col-12 text-center d-flex flex-column justify-content-center align-content-center">
+                <h2 class="subtitle">¡Bienvenido <span class="cartmander-text">Cartmander</span>!
+                    <br /> 
+                    Tu tienda más confiable ;)</h2>
+            </div>
+        </div>
+        <!-- Hero -->
         <div class="row">
             
             @foreach (var item in Model)
             {
                 <!-- Card individual -->
-                <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
-
-                    <!-- Fondo gris -->
-                    <div class="singlecard-img">
-                        <div><!-- Imagen card --></div>
+                
+                    <div class="col-sm-12 col-md-4 singlecard">
+                        <a asp-controller="ProductoRelProveedores" asp-action="ViewCliente" asp-route-id="@item.id" class="link-block">
                         <!-- Fondo gris -->
+                        <div class="singlecard-img">
+                            <div><!-- Imagen card --></div>
+                            <!-- Fondo gris -->
+                        </div>
+                        <!-- Texto card -->
+                        <div class="d-flex justify-content-between">
+                           <div class="singlecard-text">
+                                <p>@item.producto.nombre</p>
+                                <p>$@item.precioVenta</p>
+                            </div>
+                            <div class="">
+                                <p>Hay @item.stock unidades</p>
+                            </div>
+                        </div>
+                            </a>
+                        <!-- Texto card -->
                     </div>
-                    <!-- Texto card -->
-                    <div class="singlecard-text">
-                        <p>@item.nombre</p>
-                        <p>$Precio</p>
-                    </div>
-                    <!-- Texto card -->
-                </div>
-
+                
                 <!-- Card individual -->
-            }
-            
-            
+            }                        
         </div>
     </div>
-    <!-- Catalogo -->
-
-    
-    <!-- Linea diagonal -->
-    <div class="album-end"></div>
-    <!-- Linea diagonal -->
-
-    <!-- Sobre Nosotros -->
-
-    <!-- Sobre Nosotros -->
-
 </div>
+    <!-- Catalogo -->    
+    <!-- Linea diagonal
+    <div class="album-end"></div>
+    Linea diagonal -->

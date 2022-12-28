@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model List<ProductoRelOrden>
+}
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="">
+    <div class="container-fluid album">
+
+        <div class="row">
+            
+            @foreach (var item in Model)
+            {
+                <!-- Card individual -->
+                <div class="col-sm-12 col-md-4 col-lg-3 singlecard">
+
+                    <!-- Fondo gris -->
+                    <div class="singlecard-img">
+                        <div><!-- Imagen card --></div>
+                        <!-- Fondo gris -->
+                    </div>
+                    <!-- Texto card -->
+                    <div class="d-flex justify-content-between">
+                       <div class="singlecard-text">
+                            <p>@item.productoRelProveedor.producto.nombre</p>
+                            <p>$@item.productoRelProveedor.precioVenta</p>
+                        </div>
+                        <div> <a asp-controller="Product" asp-action="Index" class="btn btn-primary">Comprar</a> </div>
+                    </div>
+                    
+                    <!-- Texto card -->
+                </div>
+
+                <!-- Card individual -->
+            }
+            
+            
+        </div>
+    </div>
+    <!-- Catalogo -->
+
+    
+    <!-- Linea diagonal -->
+    <div class="album-end"></div>
+    <!-- Linea diagonal -->
+
+    <!-- Sobre Nosotros -->
+
+    <!-- Sobre Nosotros -->
+
+</div>
+}

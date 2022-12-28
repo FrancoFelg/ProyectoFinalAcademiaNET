@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\img\\Productos.png"
     },
     {
+      "Id": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\wwwroot\\img\\fire.png",
+      "PackagePath": "staticwebassets\\img\\fire.png"
+    },
+    {
       "Id": "C:\\Users\\felamberti\\Documents\\GitHub\\ProyectoFinalAcademiaNET\\MVC004\\wwwroot\\img\\shopping-cart.png",
       "PackagePath": "staticwebassets\\img\\shopping-cart.png"
     },
