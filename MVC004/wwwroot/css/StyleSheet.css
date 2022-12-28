@@ -62,9 +62,9 @@ main {
 }
 
 .gradient {
-    /*position: absolute; */  
-/*    min-height: 100vh;
-    min-width: 100vw;*/
+    position: absolute; 
+    min-height: 100vh;
+    min-width: 100vw;
     
     background: rgb(0,29,52);
     background: linear-gradient(180deg, 
@@ -73,14 +73,8 @@ main {
 }
 
 .gradient-default {
-    background: rgb(28,25,68);
-    background: linear-gradient(0deg, rgba(28,25,68,1) 19%, rgba(5,5,130,1) 44%, rgba(0,212,255,1) 100%);
+    background: var(--darkblue);    
 }
-
-.album {
-    /*background: rgb(0,29,52);    */
-}
-
 
 .album-end {
     width: 100%;
@@ -129,7 +123,6 @@ h1 {
 }
 
 .singlecard-text > p:nth-child(1) {
-    
     margin-bottom: 5px;
 }
 

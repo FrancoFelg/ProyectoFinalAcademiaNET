@@ -92,6 +92,7 @@ namespace MVC004.Datos
                     cmd.Parameters.AddWithValue("pass", obEmpleados.password);
                     cmd.Parameters.AddWithValue("numdoc", obEmpleados.doc_nro);
                     cmd.Parameters.AddWithValue("nombre", obEmpleados.nombre);
+                    cmd.Parameters.AddWithValue("tipodoc", obEmpleados.doc_tipo_id);
                     cmd.Parameters.AddWithValue("apellido", obEmpleados.apellido_razsoc);
                     cmd.CommandType = CommandType.StoredProcedure;
                  
@@ -102,7 +103,7 @@ namespace MVC004.Datos
             }
             catch (Exception e)
             {
-                string error = e.Message;
+                System.Diagnostics.Debug.WriteLine(e);
                 respuesta = false;  
 
             }

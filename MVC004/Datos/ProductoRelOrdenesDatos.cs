@@ -141,10 +141,10 @@ namespace MVC004.Datos
                 using (var conexionTemp = new SqlConnection(conexion.getCadenaSQL()))
                 {
                     conexionTemp.Open();
-                    SqlCommand cmd = new SqlCommand("INS_Prod_Rel_Ordenes", conexionTemp);
+                    SqlCommand cmd = new SqlCommand("INS_OrdenProd", conexionTemp);
 
-                    cmd.Parameters.AddWithValue("prodRelProv_id", prod.productoRelProveedor.id);
-                    cmd.Parameters.AddWithValue("orden_id", prod.ordenId);                    
+                    cmd.Parameters.AddWithValue("producto", prod.productoRelProveedor.id);
+                    cmd.Parameters.AddWithValue("orden", prod.ordenId);                    
                     cmd.Parameters.AddWithValue("cantidad", prod.cantidad);
 
 
