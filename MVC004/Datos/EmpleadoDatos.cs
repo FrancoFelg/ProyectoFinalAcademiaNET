@@ -87,11 +87,11 @@ namespace MVC004.Datos
                 {
                     conexionTemp.Open();    
 
-                    SqlCommand cmd= new SqlCommand("LoginEmpleados",conexionTemp);
-                    cmd.Parameters.AddWithValue("usuario", obEmpleados.nickname);
-                    cmd.Parameters.AddWithValue("pass", obEmpleados.password);
+                    SqlCommand cmd= new SqlCommand("INS_Empleados", conexionTemp);
+                    cmd.Parameters.AddWithValue("idusuario", obEmpleados.id_usuario);                    
                     cmd.Parameters.AddWithValue("numdoc", obEmpleados.doc_nro);
                     cmd.Parameters.AddWithValue("nombre", obEmpleados.nombre);
+                    cmd.Parameters.AddWithValue("tipodoc", obEmpleados.doc_tipo_id);
                     cmd.Parameters.AddWithValue("apellido", obEmpleados.apellido_razsoc);
                     cmd.CommandType = CommandType.StoredProcedure;
                  
@@ -102,7 +102,7 @@ namespace MVC004.Datos
             }
             catch (Exception e)
             {
-                string error = e.Message;
+                System.Diagnostics.Debug.WriteLine(e);
                 respuesta = false;  
 
             }

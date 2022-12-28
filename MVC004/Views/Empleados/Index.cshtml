@@ -1,7 +1,6 @@
 ﻿@model List<Empleados>
 
-<body>
-<div class="container justify-items-center">
+    <div class="container justify-items-center min-vh-80">
     <div class="row">
 
             <div class="col-12 py-3 px-2  d-flex align-items-center justify-content-between">
@@ -9,41 +8,40 @@
                 <a asp-action="RegEmpleados" asp-controller="Empleados" class="btn btn-primary">Registrar nuevo Empleado</a>
             </div>
 
-
-    </div>
-
-
-    <div>
- <table class="table table-striped-columns g-6">
-     <tr>
-         <th>nombre</th>
-         <th>apellido</th>
-         <th>tipo de documento</th>
-         <th>numero de documento</th>
-         <th> Fecha de alta</th>
-         <th>Opcion 1</th>
-         <th>Opcion 2</th>
-     </tr>
-
-                @foreach (var item in Model)
-                {
+    
 
 
-               <tr>
-                    <th>@item.nombre</th>
-                    <th>@item.apellido_razsoc</th>
-                    <th>@item.doc_tipo_id</th>
-                    <th>@item.doc_nro</th>
-                    <th>@item.fecha_alta</th>
-                        <th>  <a asp-action="ModEmpleados" asp-controller="Empleados" class="btn btn-opciones" asp-route-id="@item.Id">Modificar</a></th>
-                        <th> <a asp-action="DelEmpleados" asp-controller="Empleados" class="btn btn-eliminar" asp-route-id="@item.Id">Eliminar</a></th>
+    <div class="row">
+                <table class="table table-striped-columns g-6">
+             <tr>
+                 <th>nombre</th>
+                 <th>apellido</th>
+                 <th>tipo de documento</th>
+                 <th>numero de documento</th>
+                 <th> Fecha de alta</th>
+                 <th>Opcion 1</th>
+                 <th>Opcion 2</th>
+             </tr>
+
+                        @foreach (var item in Model)
+                        {
+
+
+                       <tr>
+                            <th>@item.nombre</th>
+                            <th>@item.apellido_razsoc</th>
+                            <th>@item.doc_tipo_id</th>
+                            <th>@item.doc_nro</th>
+                            <th>@item.fecha_alta</th>
+                                <th>  <a asp-action="ModEmpleados" asp-controller="Empleados" class="btn btn-opciones" asp-route-id="@item.Id">Modificar</a></th>
+                                <th> <a asp-action="DelEmpleados" asp-controller="Empleados" class="btn btn-eliminar" asp-route-id="@item.Id">Eliminar</a></th>
                         
-               </tr>
+                       </tr>
 
 
 
-                }
- </table>
- </div>
- </div>
-</body> 
+                        }
+         </table>
+         </div>
+    </div>
+</div>

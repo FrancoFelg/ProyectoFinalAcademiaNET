@@ -1,9 +1,6 @@
 ﻿@model List<Clientes>
 
-
-<body>
-
-    <div class="container justify-items-center posicion">
+    <div class="container justify-items-center posicion min-vh-80" style="background: red;">
 
 
     <div class="row">
@@ -14,38 +11,37 @@
             </div>
     </div>
 
-    <div>
- <table class="table table-striped-columns g-6 table-hover table-responsive-sm">
-     <tr>
-         <th>ID</th>
-         <th>Nombre</th>
-         <th>Apellido</th>
-         <th>Domicilio</th>
-         <th>Numero de Documento</th>
-         <th>Opcion 1</th>
-         <th>Opcion 2</th>
+    <div class="row">
+             <table class="table table-striped-columns g-6 table-hover table-responsive-sm">
+                 <tr>
+                     <th>ID</th>
+                     <th>Nombre</th>
+                     <th>Apellido</th>
+                     <th>Domicilio</th>
+                     <th>Numero de Documento</th>
+                     <th>Opcion 1</th>
+                     <th>Opcion 2</th>
 
 
-     </tr>
-                @foreach (var item in Model)
-                {
+                 </tr>
+                            @foreach (var item in Model)
+                            {
 
 
-               <tr>
-                    <th>@item.Id</th>
-                    <th>@item.nombre</th>
-                    <th>@item.apellido_razsoc</th>
-                    <th>@item.domicilio</th>
-                    <th>@item.doc_nro</th>
-                    <th>  <a asp-action="ModCliente" asp-controller="Clientes" class="btn btn-opciones" asp-route-id="@item.Id">Modificar</a></th>
-                        <th>  <a asp-action="DelCliente" asp-controller="Clientes" class="btn btn-eliminar" asp-route-id="@item.Id">eliminar <i class="fa fa-remove"></i></a></th>
+                           <tr>
+                                <th>@item.Id</th>
+                                <th>@item.nombre</th>
+                                <th>@item.apellido_razsoc</th>
+                                <th>@item.domicilio</th>
+                                <th>@item.doc_nro</th>
+                                <th>  <a asp-action="ModCliente" asp-controller="Clientes" class="btn btn-opciones" asp-route-id="@item.Id">Modificar</a></th>
+                                <th>  <a asp-action="DelCliente" asp-controller="Clientes" class="btn btn-eliminar" asp-route-id="@item.Id">eliminar <i class="fa fa-remove"></i></a></th>
                     
-               </tr>
+                           </tr>
 
 
 
-                }
- </table>
- </div>
- </div>
-</body> 
+                            }
+             </table>
+         </div>
+    </div>
