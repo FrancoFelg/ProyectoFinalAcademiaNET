@@ -1,0 +1,106 @@
+﻿@using Microsoft.AspNetCore.Identity;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC004.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/StyleSheet.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>    
+        <main role="main" class="gradient-default">
+            <div class="gradient min-vh-100"></div>
+
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg  aling-content-center">
+                <!--BRAND-->
+                <!-- Logo -->
+                <h1 class="p-2 navbar-brand"><span class="cartmander-title">Cartmander</span></h1>
+                <img class="cartmander-logo navbar-brand" src="/img/fire.png" />
+
+                <!--BUTTON COLAPSE-->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#contenido-nav"
+                        aria-controls="contenido-nav"
+                        aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--NAVBAR CONTENIDO-->
+                <div class="collapse navbar-collapse active justify-content-center align-items-center" id="contenido-nav">
+
+                    <ul class="navbar-nav ">
+                        <!--Home-->
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-controller="Home" asp-action="Index"><p>Inicio</p></a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" asp-controller="Orden" asp-action="Index"><p>Ordenes</p></a> </li>
+
+                        @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor")))
+                        {
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Product" asp-action="Index"><p>Productos</p></a> </li>                            
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Proveedores" asp-action="Index"><p>Proveedores</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Clientes" asp-action="Index"><p>Clientes</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Empleados" asp-action="Index"><p>Empleados</p></a> </li>
+                        }
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Promocion" asp-action="Index"><p>Promocion</p></a> </li>
+                        }
+
+                        <li class="nav-item"> <a class="nav-link" asp-controller="Auth" asp-action="Salir"><p>Cerrar sesion</p></a> </li>
+
+
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+            
+
+                     <div class="">
+                     @RenderBody()
+                    </div>
+
+                </div>
+                <!-- Navbar -->
+                
+            
+                
+
+                <!-- Footer -->
+                <div class="">
+                    <div class="container mt-5">
+                        <div class="row text-center">
+                            <div class="col-3">
+                                <p>Cartmander</p>                                
+                            </div>
+                            <div class="col-3">
+                                <p>¡Únete a nosotros y vende productos!</p>
+                            </div>
+                            <div class="col-3">
+                                <p>¡Mira nuestro catálogo!</p>
+                            </div>
+                            <div class="col-3">
+                                <p>¿Tienes dudas? Consulta nuestro FAQ</p>
+                            </div>
+                       </div>
+                </div>
+            </div>
+                <!-- Footer -->
+            
+        </main>    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+</body>
+</html>

@@ -1,0 +1,240 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --darkblue: #001D34;
+    --lightblue: #00A3AE;
+    --white: #ffffff;
+    --lightgray: #E9E9E9;
+    --fluorgreen: #DAED26;
+    --cartmander: #FF7000;
+}
+
+* {
+    /*
+        TODO: Buscar solucion a este bug. Esta propiedad está porque si no, hay scroll horizontal por motivos desconocidos.
+    */
+    overflow-x: hidden;
+    font-family: 'Archivo', sans-serif;
+    z-index: 1;
+}
+
+body {
+    color: var(--white);
+}
+
+a, p {
+    color: var(--white);
+    text-decoration: none;
+}
+
+th {
+    color: var(--white);
+    text-decoration: none;
+}
+
+td {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.text-bold{
+    font-weight: 800;
+}
+
+singlecard :hover {
+    color: var(--white);
+    animation: link-block-resize;
+}
+    
+
+.navb-list > li > a {
+    color: #E9E9E9;
+}
+
+.navb-list > li > a:hover {
+    color: var(--white);
+}
+
+main {
+    width: 100vw;
+    
+    position: absolute;
+}
+
+.gradient {
+    position: absolute; 
+    min-height: 100vh;
+    min-width: 100vw;
+    
+    background: rgb(0,29,52);
+    background: linear-gradient(180deg, 
+    var(--lightblue) 0%,
+    var(--darkblue) 100%);
+}
+
+.gradient-default {
+    background: var(--darkblue);    
+}
+
+.album-end {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(175deg, var(--darkblue) 59.8%, var(--white) 60%, var(--white) 100%);
+}
+
+.gradient2 {    
+    background: rgb(0,29,52);
+    background: linear-gradient(175deg, var(--darkblue) 59.8%, var(--white) 60%, var(--white) 100%);
+}
+
+h1 {
+    font-size: 14px
+}
+
+.cartmander-text {
+    color: var(--cartmander);
+}
+
+.cartmander-title {
+    color: var(--white);
+    border-bottom: var(--cartmander) 5px solid;
+}
+
+.cartmander-logo{
+    height: 1.5em;
+}
+
+.min-vh-80{
+    min-height: 80vh;
+}
+
+
+.subtitle {
+    font-size: 4em;
+}
+
+.image-centered {
+    height: 80vh;
+    margin-bottom: 20px;
+}
+
+.singlecard-text > p {
+    font-size: 1.5em;
+}
+
+.singlecard-text > p:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+.singlecard-text > p:nth-child(2) {
+    color: var(--fluorgreen);
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.singlecard-img {
+    background-color: var(--lightgray);
+    padding: 2.2em 3em;
+    margin: 0 5px;
+    max-width: 450px;
+    text-align: center;
+    width: 100%;
+}
+
+.singlecard-img > div:nth-child(1) {
+    background-image: url("/img/shopping-cart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 62%;
+    position: relative;
+    width: 100%;
+    box-shadow: 1px 0px 21px 4px rgba(0,0,0,0.75);
+}
+
+
+.album > div > div:nth-child(2) > .singlecard-img > div:nth-child(1) {
+    background-image: url("/img/Lenovo.png");
+}
+
+.album > div > div:nth-child(3) > .singlecard-img > div:nth-child(1) {
+    background-image: url("/img/Productos.png");
+}
+
+.album > div > div:nth-child(4) > .singlecard-img > div:nth-child(1) {
+    background-image: url("/img/Lenovo.png");
+}
+
+.album > div > div:nth-child(5) > .singlecard-img > div:nth-child(1) {
+    background-image: url("/img/shopping-cart.png");
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-container > div > div > p {
+    color: var(--lightblue);
+    font-size: 18px;
+}
+
+.footer-list > li {
+    margin: 15px;
+}
+
+.contact-us > form > input, .contact-us > form > textarea {
+    width: 100%;
+    color: var(--white);
+    background-color: transparent;
+    border: 0;
+    border-bottom: var(--lightblue) solid 1px;
+}
+
+.contact-us > form > textarea {
+     height: 5em;
+     resize: none;
+}
+
+
+@media (max-width: 760px) {
+    .singlecard {
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-container{
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    h1{
+        text-align: center;
+    }
+}
+
+/* Aqui se modifico el modal-backdrop para que no haga una superposicion sobre el modal*/
+
+.modal-backdrop{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:0;
+    width:100vw;
+    height:100vh;
+
+}
+
+.btn-opciones {
+    color: #ffffff;
+   
+    border-color: #00E6FF;
+}
+
+.btn-eliminar {
+    color: #FFFFFF;
+   
+    border-color: #F01111;
+} 

@@ -1,0 +1,54 @@
+﻿@model List<Proveedores>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="container justify-items-center min-vh-80">
+
+    <div class="row">
+
+        <div class="col-12 py-3 px-2  d-flex align-items-center justify-content-between">
+            <h2>Lista de Proveedores</h2>
+            <a asp-action="RegistroProv" asp-controller="Proveedores" class="btn btn-primary">Registrar nuevo Proveedor</a>
+        </div>
+
+
+    <div class="row">
+         <table class="table  table-striped-columns g-6">
+                  <tr>
+                 <th>Id</th>
+                 <th>Nombre</th>
+                 <th>Ubicacion</th>
+                 <th>Domicilio</th>
+                 <th>Tipo de Documento</th>
+                 <th>Numero de Documento</th>
+                 <th>Opcion1</th>
+                 <th>Opcion2</th>
+
+
+             </tr>
+            @foreach (var item in Model)
+            {
+           
+
+                   <tr>
+                        <th>@item.id</th>
+                        <th>@item.nombre</th>
+                        <th>@item.ubicacion</th>
+                        <th>@item.direccion</th>
+                        <th>@item.tipo_doc</th>
+                        <th>@item.nro_doc</th>
+                        <th>  <a asp-action="ModificarProv" asp-controller="Proveedores" class="btn btn-opciones" asp-route-id="@item.id">Modificar</a></th>
+                            <th>  <a asp-action="EliminarProv" asp-controller="Proveedores" class="btn btn-eliminar" asp-route-id="@item.id">eliminar</a></th>
+                   </tr>
+            
+
+
+            }
+         </table>
+     </div>
+ </div>
+
+

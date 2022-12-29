@@ -1,0 +1,39 @@
+﻿@model ProductoRelOrden
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    
+
+    <form asp-controller="ProductoRelOrdenes" asp-action="Create" method="post">
+        <div class="container min-vh-80">
+
+            <div class="row mt-2">
+                <div class="col-8 mt-5">
+                    <h2>@Model.productoRelProveedor.producto.nombre</h2>
+                    <h3>$ @Model.productoRelProveedor.precioVenta</h3>
+                    <p>Proveedor: @Model.productoRelProveedor.proveedor.nombre (DNI = @Model.productoRelProveedor.proveedor.nro_doc), Ubicación: @Model.productoRelProveedor.proveedor.ubicacion @Model.productoRelProveedor.proveedor.direccion </p>
+                </div>
+                <div class="col-4">
+                    <div class="singlecard-img">
+                        <div><!-- Imagen card --></div>
+                        <!-- Fondo gris -->
+                    </div>
+                </div>
+
+                <input asp-for="productoRelProveedor.id" type="hidden">
+
+                <label for="ordenId">ID Orden</label>
+                <input asp-for="ordenId" type="number" class="form-control" id="ordenId" placeholder="Ingrese ID de la Orden">
+
+                <label for="cantidad">Ingresar Cantidad</label>
+                <input asp-for="cantidad" type="number" class="form-control" id="cantidad" placeholder="Ingrese la cantidad a comprar">
+
+                <div class="d-flex justify-content-between">
+                    <button asp-controller="ProductoRelOrdenes" asp-action="Create" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+}
