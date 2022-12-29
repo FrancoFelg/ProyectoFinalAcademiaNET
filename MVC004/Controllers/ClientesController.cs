@@ -5,11 +5,12 @@ using MVC004.Models;
 
 namespace MVC004.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    
     public class ClientesController : Controller
     {
         ClienteDatos clienteDatos=new ClienteDatos();
-        
+
+        [Authorize]
         // visualizacion de la lista de clientes
         public IActionResult Index()
         {
@@ -17,12 +18,13 @@ namespace MVC004.Controllers
 
             return View(listacliente);
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult RegCliente()
         {
             return View();  
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult RegCliente( Clientes obclientes)
         {
@@ -34,14 +36,14 @@ namespace MVC004.Controllers
             }
             else { return View(); }
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult ModCliente(int id)
         {
             
             var obclientes = clienteDatos.ObtenerCli(id);
             return View(obclientes);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult ModCliente(Clientes obclientes)
         {
@@ -63,7 +65,7 @@ namespace MVC004.Controllers
             return View(obclientes);  
 
         }*/
-    
+        [Authorize(Roles = "Admin")]
         public IActionResult DelCliente(int id)
         {
             var respuesta = clienteDatos.EliminarCli(id);

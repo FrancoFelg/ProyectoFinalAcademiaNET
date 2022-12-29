@@ -7,7 +7,10 @@
 
             <div class="col-12 py-3 px-2  d-flex align-items-center justify-content-between">
                 <h2>Registro de Clientes </h2>
+                @if(User.IsInRole("Admin")){
                 <a asp-action="RegCliente" asp-controller="Clientes" class="btn btn-primary">Registrar nuevo Cliente</a>
+                }
+                
             </div>
     </div>
 
@@ -34,10 +37,20 @@
                                 <th>@item.apellido_razsoc</th>
                                 <th>@item.domicilio</th>
                                 <th>@item.doc_nro</th>
+
+                                @if (User.IsInRole("Admin"))
+                                {
                                 <th>  <a asp-action="ModCliente" asp-controller="Clientes" class="btn btn-opciones" asp-route-id="@item.Id">Modificar</a></th>
-                                <th>  <a asp-action="DelCliente" asp-controller="Clientes" class="btn btn-eliminar" asp-route-id="@item.Id">eliminar <i class="fa fa-remove"></i></a></th>
-                    
-                           </tr>
+                        <th>  <a asp-action="DelCliente" asp-controller="Clientes" class="btn btn-eliminar" asp-route-id="@item.Id">eliminar <i class="fa fa-remove"></i></a></th>
+                    }
+                    else
+                    {
+                        <th colspan="2">No tiene los permisos necesarios</th>
+                    }
+
+                       
+                        }
+                    </tr>
 
 
 

@@ -8,7 +8,7 @@
             <div class="col-12">
                 <div class="col-12 py-3 px-2  d-flex align-items-center justify-content-between">
                     <h2>Tabla de Ordenes de Compra</h2>
-                    @if (User.IsInRole("Admin"))
+                    @if (User.IsInRole("Vendedor") || User.IsInRole("Admin"))
                     {
                         <a asp-controller="Orden" asp-action="Create" class="btn btn-primary">Crear orden de compra</a>
                     }
@@ -36,7 +36,7 @@
                             <td>@item.cliente.nombre</td>
                             <td>@item.fechaAlta </td>
                             <td>@item.fechaEntrega</td>
-                                @if (User.IsInRole("Admin"))
+                                @if (User.IsInRole("Vendedor") || User.IsInRole("Admin"))
                                 {
                                     <td><a asp-controller="Orden" asp-action="Editar" asp-route-id="@item.id" asp-id class="btn btn-opciones">Editar</a></td>
                                     <td><a asp-controller="Orden" asp-action="Eliminar" asp-route-id="@item.id" class="btn btn-eliminar">Eliminar</a></td>

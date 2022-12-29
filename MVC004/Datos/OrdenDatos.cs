@@ -28,38 +28,21 @@ namespace MVC004.Datos
 
                             objLista.Add(new Orden()
                             {
-                                id = Convert.ToInt32(lector["id"]),
+                                id = Convert.ToInt32(lector["ord_id"]),
                                 vendedor = new Empleado()
                                 {
-                                    id = Convert.ToInt32(lector["id"]),
-                                    docTipo = new DocTipo()
-                                    {
-                                        id = Convert.ToInt32(lector["id"]),
-                                        doc_tipo = Convert.ToString(lector["doc_tipo"]),
-                                    },
-                                    docNro = Convert.ToInt32(lector["doc_nro"]),
-                                    fechaAlta = Convert.ToDateTime(lector["fecha_alta"]),
-                                    nombre = Convert.ToString(lector["nombre"]),
-                                    apellidoORazonSocial = Convert.ToString(lector["apellido_razsoc"]),
+                                    id = Convert.ToInt32(lector["ord_vendedor_id"]),
+                                    nombre = Convert.ToString(lector["empl_nombre"]),
+                                    
                                 },
                                 cliente = new Cliente()
                                 {
-                                    Id = Convert.ToInt32(lector["id"]),
-                                    docTipo = new DocTipo()
-                                    {
-                                        id = Convert.ToInt32(lector["id"]),
-                                        doc_tipo = Convert.ToString(lector["doc_tipo"]),
-                                    },
-                                    docNro = Convert.ToInt32(lector["doc_nro"]),
-                                    fechaAlta = Convert.ToDateTime(lector["fecha_alta"]),
-                                    nombre = Convert.ToString(lector["nombre"]),
-                                    apellido = Convert.ToString(lector["apellido_razsoc"]),
-                                    domicilio = Convert.ToString(lector["domicilio"]),
-                                    localidad = Convert.ToString(lector["localidad"]),
-
+                                    Id = Convert.ToInt32(lector["ord__cliente_id"]),
+                                    nombre = Convert.ToString(lector["clie_nombre"]),
+                                    
                                 },
-                                fechaAlta = DateOnly.FromDateTime(Convert.ToDateTime(lector["fecha_alta"])),
-                                fechaEntrega = DateOnly.FromDateTime(Convert.ToDateTime(lector["fecha_entrega"])),
+                                fechaAlta = DateOnly.FromDateTime(Convert.ToDateTime(lector["ord_fecha_alta"])),
+                                fechaEntrega = DateOnly.FromDateTime(Convert.ToDateTime(lector["ord_fecha_entrega"])),
                             });
                         }
                     }

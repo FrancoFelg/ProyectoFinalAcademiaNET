@@ -170,7 +170,7 @@ namespace MVC004.Datos
             }
             catch (Exception e)
             {
-                string error = e.Message;
+                System.Diagnostics.Debug.WriteLine(e);
                 respuesta = false;
             }
             return respuesta;

@@ -45,14 +45,13 @@
 
                         @if (User.IsInRole("Admin") || (User.IsInRole("Vendedor")))
                         {
-                            <li class="nav-item"> <a class="nav-link" asp-controller="Product" asp-action="Index"><p>Productos</p></a> </li>
-                            
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Product" asp-action="Index"><p>Productos</p></a> </li>                            
                             <li class="nav-item"> <a class="nav-link" asp-controller="Proveedores" asp-action="Index"><p>Proveedores</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Clientes" asp-action="Index"><p>Clientes</p></a> </li>
+                            <li class="nav-item"> <a class="nav-link" asp-controller="Empleados" asp-action="Index"><p>Empleados</p></a> </li>
                         }
                         @if (User.IsInRole("Admin"))
                         {
-                            <li class="nav-item"> <a class="nav-link" asp-controller="Clientes" asp-action="Index"><p>Clientes</p></a> </li>
-                            <li class="nav-item"> <a class="nav-link" asp-controller="Empleados" asp-action="Index"><p>Empleados</p></a> </li>
                             <li class="nav-item"> <a class="nav-link" asp-controller="Promocion" asp-action="Index"><p>Promocion</p></a> </li>
                         }
 
